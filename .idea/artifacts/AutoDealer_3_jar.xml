@@ -2,7 +2,7 @@
   <artifact type="jar" name="AutoDealer_3:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/AutoDealer_3_jar</output-path>
     <root id="archive" name="AutoDealer_3.jar">
-      <element id="module-output" name="AutoDealer_3" />
+      <element id="module-output" name="AutoDealerPro" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/fasterxml/classmate/1.3.0/classmate-1.3.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar" path-in-jar="/" />

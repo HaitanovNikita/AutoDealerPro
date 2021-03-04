@@ -30,15 +30,15 @@
       <!-- Echo all executed SQL to stdout -->
       <property name="show_sql">true</property>
  
-      <mapping class="tables.Automobile"/>
-      <mapping class="tables.ModelCar"/>
-      <mapping class="tables.ColorCar"/>
-      <mapping class="tables.EngineCar"/>
-      <mapping class="tables.PowerCar"/>
-      <mapping class="tables.TypeCarBody"/>
-      <mapping class="tables.Manager"/>
-      <mapping class="tables.Client"/>
-      <mapping class="tables.CarSale"/>
+      <mapping class="autodealer.com.logic.entity.Automobile"/>
+      <mapping class="autodealer.com.logic.entity.ModelCar"/>
+      <mapping class="autodealer.com.logic.entity.ColorCar"/>
+      <mapping class="autodealer.com.logic.entity.EngineCar"/>
+      <mapping class="autodealer.com.logic.entity.PowerCar"/>
+      <mapping class="autodealer.com.logic.entity.TypeCarBody"/>
+      <mapping class="autodealer.com.logic.entity.Manager"/>
+      <mapping class="autodealer.com.logic.entity.Client"/>
+      <mapping class="autodealer.com.logic.entity.CarSale"/>
       
  
   </session-factory>
