@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+<meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <title>Audi UA</title>
+    <link rel="shortcut icon" href="/images/logo1.png" type="image/png">
+    <link rel="stylesheet" type="text/javascript" href="js/script_class.js">
+    <link rel="stylesheet" type="text/javascript" href="js/script_head.js">
+    <link rel="stylesheet" type="text/javascript" href="js/script_car_model.js">
+    <link rel="stylesheet" type="text/javascript" href="js/login.js">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Дизайн кнопок меню -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+
+<body id="loginBody">
+    <!-- <script type="text/javascript" src="js/script_head.js"></script> -->
+    <form id="formEnterToSystem">
+
+        <div id="placeLogin">
+            <h4 class="text-white-50">Вхід в систему для працівників Audi-центру</h4>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text text-body" id="basic-addon1">Логін</span>
+                </div>
+                <input type="text" id="login_enter" value="" class="form-control" placeholder="" aria-label="Логін"
+                    aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text text-body" id="basic-addon1">Пароль</span>
+                </div>
+                <input type="text" id="pass_enter" value="" class="form-control" placeholder="" aria-label="Пароль"
+                    aria-describedby="basic-addon1">
+            </div>
+            <div display="inline-block">
+                <button type="button" id="logInSystem" class="btn btn-secondary text-body">Вхід</button>
+                <button type="button" id="regInSystem" class="btn btn-secondary text-body">Зареєструватися</button>
+            </div>
+        </div>
+
+        <div id="placeRegist">
+            <h4 class="text-white-50">Реєстрація в системі для працівників <br> Audi-центру</h4>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text text-body">Ім'я та прізвище</span>
+                </div>
+                <input type="text" id="fname_regist" value="" aria-label="First name" class="form-control">
+                <input type="text" id="lname_regist" value="" aria-label="Last name" class="form-control">
+            </div>
+            <br>
+            <div id="regist-cont">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text text-body" id="basic-addon1">Пошта</span>
+                    </div>
+                    <input type="text" id="position_regist" value="" class="form-control" placeholder="" aria-label="Пошта"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text text-body" id="basic-addon1">Логін</span>
+                    </div>
+                    <input type="text" id="login_regist" value="" class="form-control" placeholder="" aria-label="Логін"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text text-body" id="basic-addon1">Пароль</span>
+                    </div>
+                    <input type="text" id="pass_regist" value="" class="form-control" placeholder="" aria-label="Пароль"
+                        aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div display="inline-block">
+                <button type="button" id="regist" class="btn btn-secondary text-body">Зареєструватися</button>
+            </div>
+        </div>
+
+
+
+    </form>
+
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript">
+        const one = new RegistryInSystem(document.getElementById("formEnterToSystem"));
+    </script>
+    <div id="footer">&copy; Захищено HN </div>
+
+</body>
+
+</html>

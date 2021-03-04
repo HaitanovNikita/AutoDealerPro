@@ -1,0 +1,482 @@
+
+#loginBody{
+  background-color:rgb(23,33,43);
+}
+
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  background: rgb(23, 33, 43);
+  color: #007bff;
+  width: 100%;
+  opacity: 0.3;
+}
+
+/* CONTROL PANEL*/
+
+.left-cont,.right-cont,.centr-cont{
+display: inline-block;
+
+}
+.left-cont{
+  width: 17%;
+}
+.right-cont{
+  width: 20%;
+}
+
+.centr-cont{
+  width:60%;
+  margin-top: 30px;
+  margin-bottom: 1%;
+  text-align: center;
+  color: #9b9b9b;
+  /* border: 2px solid blueviolet; */
+}
+
+.left-cont{
+  float: left;
+  margin-top: 25px;
+  margin-left: 1%;
+  position: sticky;
+  top:70px;
+  text-align: left;
+  /* border: 2px solid red; */
+  color: #007bff;
+}
+.right-cont{
+  height:500px;
+  position: sticky;
+  margin-top:1%;
+  margin-right:1%;
+  top:65px;
+  float: right; 
+  overflow:auto;
+  text-align: right;
+  /* border: 2px solid yellow; */
+}
+
+#table{
+  background:#343a40; /* Цвет фона таблицы */
+  color: #115e9f;
+}
+
+
+.confBtn{
+  display: inline-block;
+  margin: 1% 1%;
+}
+
+.menu_categ{
+  display: inline-block;
+  text-align: center; 
+  width: 500px;
+  padding: 8px 5px 15px 5px;
+  margin: 0 18%;
+  border-bottom:3px solid #9b9b9b;
+  border-left:2px solid #9b9b9b;
+  border-right:2px solid #9b9b9b;
+}
+
+/* AudiConnect/placeLogin */
+#placeLogin{
+  display: block;
+  margin: 10% 10% 10% 33%;
+  width: 450px;
+  text-align: center;
+  padding: 1%;
+  border: 2px solid #9b9b9b;
+}
+
+#placeRegist{
+  display: block;
+  margin: 10% 10% 10% 28%;
+  width: 600px;
+  text-align: center;
+  padding: 1%;
+  border: 2px solid #9b9b9b;
+}
+#regist-cont{
+  display: inline-block;
+  width: 400px;
+}
+/* /// */
+
+
+/* Картинка логотип */
+.logo-img{
+    width:70px;
+    height:50px;
+    margin-right:70px;
+    
+}
+
+#searchCarImg{
+  width: 100%;
+  height: 55%;
+}
+
+.img-main{
+  width: 100%;
+  height: 85%;
+}
+/* Информация о компании */
+#info_compani{
+  background: #9b9b9b;
+  text-align: center;
+}
+
+#legal_inform{
+  /* position: relative; */
+  margin-top: 100px;;
+  display: block;
+  text-align: center;
+  margin:12% 17% 12% 17%;
+}
+
+/* Картинки в карусели  */
+.carusel-img{
+    width:100%;
+    height: 700px;
+}
+/*  */
+
+
+header{
+    top:0px;
+    position: sticky;
+    z-index: 999999;
+}
+
+.contacts{
+  text-align: center;
+  width:100%;
+  height: 250px;
+  background-color: #000;
+}
+
+/* свойства информационной карточки */
+.descriptive-card{
+  position: relative;
+  display: inline-block;
+  margin: 70px 70px 35px 75px;
+  height: 200px;  
+}
+
+.descriptive-title, .descriptive-text{
+  letter-spacing: 0.1em;
+}
+
+.descriptive-text{
+  position: relative;
+  height:35px;
+  color: #555252;
+  border-top: #9b9b9b;
+  border-bottom: #9b9b9b;
+  border-bottom: 0;
+  
+}
+
+
+#containerSearchAuto{
+  margin: 1% 10% 1% 10%;
+  
+}
+
+/*  */
+
+          /* Свойства карточки машин */
+          .cars-container{
+            text-align: center;
+            width: 100%;
+          }
+
+          .card-img-top{
+            position: relative;
+            width: 100%;
+            height: 300px;
+          }
+
+          .card-text{
+            position: relative;
+            text-align:left;
+            display: block;
+            border:1px solid #4b4c4d;
+            height:35px;
+            color: #555252;
+            padding: 7px 70px 7px 10px;
+            border-top: #9b9b9b;
+            border-bottom: #9b9b9b;
+            border-bottom: 0;
+            letter-spacing: 0.1em;
+          } 
+
+          .car-container{
+            display: inline-block;
+            width: 520px;
+            height:580px;
+            border:1px solid #343a40;
+            background: white;
+            margin: 10px 50px 10px 70px;
+          }
+
+          .car-container:hover .line-card{
+            background-color:#007bff;
+          }
+
+          .card-body:hover{
+            color:#007bff;
+          }
+
+          .card-text:hover{
+            color:#007bff;
+          }
+
+          .card-subtitle:hover{
+            color:#007bff;
+          }
+
+          .card-title:hover{
+            color:#007bff;
+          }
+          
+
+          /*  */
+.p_model_car{
+  color:white;
+}
+
+h4{
+    text-align: center;
+}
+
+h4,h5{
+    text-transform: uppercase;
+}
+
+                                /* Свойства карточки модели машины */
+                                .line-card,.img-card{position: relative;}
+
+                                .img-card{
+                                  width: 100%;
+                                  height:100%;
+                                  border-top: 0;
+                                }
+
+                                .text-card,.img-card{
+                                  border-bottom: 0;
+                                  border-radius: 2px;
+                                  border-style: solid;
+                                  border-color: #9b9b9b;
+                                }
+
+                                .text-card{
+                                  padding: 15px;
+                                  text-align: center;
+                                  text-transform: uppercase;
+                                  font-family: 'Montserrat', serif; 
+                                  font-stretch: ultra-expanded;
+                                  border-bottom: 0;
+                                  letter-spacing: 0.4em;
+                                  font-weight: 800;
+                                  color:#9b9b9b;
+
+                                }
+
+                                .auto-card{
+                                  width: 250px;
+                                  margin: 15px;  
+                                  display: inline-block;
+                                  text-align: center;  
+                                }
+
+                                #auto-cards-container{
+                                  margin-left:55px;
+                                  margin-right:55px;
+                                  padding-left: 2%;
+                                  padding-right: 1%;
+                                  border-top: 1px solid #9b9b9b;
+                                  border-bottom: 1px solid #9b9b9b;
+                                  text-align: center;  
+                                  
+                                }
+
+                                .line-card{
+                                  width:100%;
+                                  height: 4px;
+                                }
+
+                                .auto-card:hover .line-card{
+                                  background-color:#007bff;
+                                }
+
+                              
+
+/* Стилизация кнопок в header */
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .flip-container{
+    padding: 1%;
+  }
+
+  .flip {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+    height: 48px;
+    margin-left: 6%;
+    margin-right: 1%;
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    -ms-perspective: 500px;
+    perspective: 500px;
+  }
+  .flip a {
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translateZ(-25px);
+    -moz-transform: translateZ(-25px);
+    -o-transform: translateZ(-25px);
+    -ms-transform: translateZ(-25px);
+    transform: translateZ(-25px);
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    -o-transition: -o-transform 0.3s;
+    -ms-transition: -ms-transform 0.3s;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  .flip a .front,
+  .flip a .back {
+    margin: 0;
+    width: 160px;
+    height: 48px;
+    line-height: 48px;
+    position: absolute;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  .flip a .front {
+    background-color: #343a40;
+    color: #fff;
+    -webkit-transform: rotateY(0) translateZ(24px);
+    -moz-transform: rotateY(0) translateZ(24px);
+    -o-transform: rotateY(0) translateZ(24px);
+    -ms-transform: rotateY(0) translateZ(24px);
+    transform: rotateY(0) translateZ(24px);
+  }
+  .flip a .back {
+    background-color:#343a40;
+    color: rgba(34,34,34,0);
+    -webkit-transform: rotateX(90deg) translateZ(24px);
+    -moz-transform: rotateX(90deg) translateZ(24px);
+    -o-transform: rotateX(90deg) translateZ(24px);
+    -ms-transform: rotateX(90deg) translateZ(24px);
+    transform: rotateX(90deg) translateZ(24px);
+    overflow: hidden;
+  }
+  .flip a .back:after {
+    content: '';
+    position: absolute;
+    top: -32%;
+    left: -10%;
+    width: 120%;
+    height: 50%;
+    background: #343a40;
+    -webkit-transform: rotate(8deg);
+    -moz-transform: rotate(8deg);
+    -o-transform: rotate(8deg);
+    -ms-transform: rotate(8deg);
+    transform: rotate(8deg);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-transition-delay: 0.15s;
+    -moz-transition-delay: 0.15s;
+    -o-transition-delay: 0.15s;
+    -ms-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+  }
+  .flip a:hover {
+    -webkit-transform: translateZ(-24px) rotateX(-90deg);
+    -moz-transform: translateZ(-24px) rotateX(-90deg);
+    -o-transform: translateZ(-24px) rotateX(-90deg);
+    -ms-transform: translateZ(-24px) rotateX(-90deg);
+    transform: translateZ(-24px) rotateX(-90deg);
+  }
+  .flip a:hover .front {
+    background: #000;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+  }
+  .flip a:hover .back {
+    color: #222;
+    -webkit-transition: color 0.4s linear;
+    -moz-transition: color 0.4s linear;
+    -o-transition: color 0.4s linear;
+    -ms-transition: color 0.4s linear;
+    transition: color 0.4s linear;
+    background: #fff;
+  }
+  .flip a:hover .back:after {
+    -webkit-transform: rotate(6deg) translate(100px, -18px);
+    -moz-transform: rotate(6deg) translate(100px, -18px);
+    -o-transform: rotate(6deg) translate(100px, -18px);
+    -ms-transform: rotate(6deg) translate(100px, -18px);
+    transform: rotate(6deg) translate(100px, -18px);
+  }
+  
+
+  /*scroll*/
+  body,
+    html {
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    #matrix {
+      width: 400px;
+      margin: auto;
+      overflow: auto;
+      text-align: justify;
+    }
+
+    #arrowTop {
+      height: 9px;
+      width: 14px;
+      color: royalblue;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      cursor: pointer;
+    }
+
+    #arrowTop::before {
+      content: '▲';
+    }
+
+    

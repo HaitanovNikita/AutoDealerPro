@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html style="background-color: rgb(23,33,43);">
+<meta charset="utf-8">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Control panel</title>
+    <link rel="shortcut icon" href="/images/logo1.png" type="image/png">
+    <link rel="stylesheet" type="text/javascript" href="js/script_class.js">
+    <link rel="stylesheet" type="text/javascript" href="js/script_get_component.js">
+    <link rel="stylesheet" type="text/javascript" href="js/script_control_panel_auto.js">
+    <link rel="stylesheet" type="text/javascript" href="js/script_audiConnectContrPanCentrCont.js">
+    <link rel="stylesheet" type="text/javascript" href="js/script_audiConnectControlPanel.js">
+    <link rel="stylesheet" type="text/javascript" href="js/script_head.js">
+    <link rel="stylesheet" type="text/javascript" href="js/script_car_model.js">
+    <link rel="stylesheet" type="text/javascript" href="js/login.js">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_control_panel.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.js"></script>
+    
+
+    <!-- Дизайн кнопок меню -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+
+<body id="body" style=" background-color:rgb(23,33,43);">
+    <script type="text/javascript" src="js/script_head.js"></script>
+    <script type="text/javascript" src="js/script_get_component.js"></script>    
+    <script type="text/javascript" src="js/script_control_panel_auto.js"></script>     
+
+  
+    <!-- элементы меню, управления страницей -->
+    <div class="left-cont">
+        <h5 id="name_manager"class="font-weight-bold"></h5>
+        <p id="post_manager"class="font-weight-light"></p>
+        <p id="email_manager"class="font-weight-light"></p>
+        <p id="login_time"class="font-weight-light"></p>
+        <p id="login_day"class="font-weight-light"></p>
+        <br><br><br><br>
+        <div id="ContainerSalesProfitOfPeriod">
+            <div class="form-row">
+                <p class="font-weight-light"> Загальний прибуток від продажів за період:</p>
+                <div class="form-group col-md-12">
+                    <label class="font-weight-light text-monospace" style=" text-transform: uppercase;" for="inputState">З якого періоду</label>
+                    <input id="inputState_from_period" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="ID Auto" placeholder="Формат:РРРР-ММ-ДД"></select>
+                    <label class="font-weight-light text-monospace" style=" text-transform: uppercase;" for="inputState">По який(включно)</label>
+                    <input id="inputState_for_period" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="ID Auto" placeholder="Формат:РРРР-ММ-ДД"></select>
+                    <br><br>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button id="viewSalesProfit"  type="button" class="btn btn-secondary">Переглянути результат</button>
+                    </div>
+                    <br><br>
+                    <div id="viewResult">
+                        <p id="viewProfit" class="font-weight-light"></p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <br><br><br>
+        <div id="containerMostPopularModel">
+            <img id="mostPopularCar" src="images/car.jpg">
+            <h5 id="mostPopularMakeCar"class="font-weight-bold"></h5>
+            <p id="mostPopularBodyCar"class="font-weight-light"></p>
+            <p id="mostPopularEngineCar"class="font-weight-light"></p>
+            <p id="mostPopularEngineCar"class="font-weight-light"></p>
+        </div>
+    
+
+    </div>
+
+    <div class="right-cont">
+       <!-- ****Службові кнопки****** -->
+        <div class="confBtn">
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button id="searchAuto"  type="button" class="btn btn-secondary">&#128270</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group"><!-- Basic example-->
+                <button id="changeAuto"  type="button" class="btn btn-secondary">Конструктор</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button id="viewAuto" type="button" class="btn btn-secondary">Перегляд</button>
+            </div>
+            
+            <br>
+        <br>
+       </div>
+       <!-- *******зміна параметрів авто********* -->
+       <div id="containerChangeAuto">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Унікальний номер авто</label>
+                    <input id="inputState id_auto" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="ID Auto" placeholder="Введіть унікальний номер авто">
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Модель авто</label>
+                    <select id="inputState model_auto" name="model_auto" style="background:#9b9b9b;" type="text" class="form-control">
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Тип двигуна авто</label>
+                    <select id="inputState engine_car" name="engine_car" type="text" style="background:#9b9b9b;" class="form-control">
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Ціна авто</label>
+                    <input id="inputState price_auto" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="Price Auto" placeholder="Введіть нову ціну авто">
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Дата випуску (РРРР-ММ-ДД)</label>
+                    <input id="inputState year_issue_car" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="Price Auto" placeholder="Введіть дату випуску данного авто">
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Потужність авто</label>
+                    <select id="inputState power_car" name="power_car" type="text" style="background:#9b9b9b;" class="form-control">
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Кузов авто</label>
+                    <select id="inputState car_body" name="car_body" type="text" style="background:#9b9b9b;" class="form-control">
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Колір автомобіля</label>
+                    <select id="inputState color_car" name="color_car" type="text" style="background:#9b9b9b;" class="form-control">
+                    </select>
+                </div>
+            </div>
+            <button id="performOperBtn" class="btn btn-dark">Змінити</button>
+       </div>
+       <!-- *************пошук авто************** -->
+        <div id="contSearcAuto">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace"style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Модель авто</label>
+                    <select id="inputSearchModelAuto" name="model_auto" type="text" style="background:#9b9b9b;" class="form-control">
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Тип двигуна авто</label>
+                    <select id="inputSearchEngineCar" name="engine_car" type="text" style="background:#9b9b9b;" class="form-control">
+                    </select>
+                </div>
+            </div>    
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Потужність авто</label>
+                    <select id="inputSearchPowerCar" name="power_car" type="text"style="background:#9b9b9b;" class="form-control">
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Кузов авто</label>
+                    <select id="inputSearchCarBody" name="car_body" type="text" style="background:#9b9b9b;" class="form-control">
+                    </select>
+                </div>
+            </div>    
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Колір автомобіля</label>
+                    <select id="inputSearchColorCar" name="color_car" type="text" style="background:#9b9b9b;" class="form-control">
+                    </select>
+                </div>
+            </div>
+            <button id="searchCarBtn" class="btn btn-dark">Пошук авто</button>
+        </div>
+       <!-- ******зміна данних співробітника***** -->
+       <div id="containerChangeManager">
+           
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Введіть ім'я менеджера</label>
+                    <input id="inputStateChangeFnameManager" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="FnameManager" placeholder="Введіть ім'я менеджера ">
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Введіть прізвище менеджера</label>
+                    <input id="inputStateChangeLnameManager" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="LnameManager" placeholder="Введіть прізвище менеджера">
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Введіть номер телефону менеджера</label>
+                    <input id="inputStateChangePhoneManager" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="PhoneManager" placeholder="Введіть номер телефону">
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Введіть email менеджера</label>
+                    <input id="inputStateChangeEmailManager" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="EmailManager" placeholder="Введіть email менеджера">
+                    </select>
+                </div>
+            </div>  
+            <button id="changeManagerBtn" class="btn btn-dark">Змінити</button>          
+        </div>
+        <!-- ****пошук співробітника************* -->
+        <div id="containerSearchManager">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Введіть ім'я менеджера</label>
+                    <input id="inputStateSearchFnameManager" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="FnameManager" placeholder="Введіть ім'я менеджера ">
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Введіть прізвище менеджера</label>
+                    <input id="inputStateSearchLnameManager" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="LnameManager" placeholder="Введіть прізвище менеджера">
+                    </select>
+                </div>
+            </div>
+            <button id="searchManagerBtn" class="btn btn-dark">Пошук</button>          
+        </div>
+        <!-- ****зміна даних клієнта************* -->
+        <div id="containerChangeClient">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Введіть ім'я клієнта</label>
+                    <input id="inputStateChangeFnameClient" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="FnameClient" placeholder="Введіть ім'я клієнта ">
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Введіть прізвище клієнта</label>
+                    <input id="inputStateChangeLnameClient" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="LnameClient" placeholder="Введіть прізвище клієнта">
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Введіть номер телефону клієнта</label>
+                    <input id="inputStateChangePhoneClient" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="PhoneClient" placeholder="Введіть номер телефону клієнта">
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Введіть email клієнта</label>
+                    <input id="inputStateChangeEmailClient" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="EmailClient" placeholder="Введіть email клієнта">
+                    </select>
+                </div>
+            </div>      
+            <button id="changeClientBtn" class="btn btn-dark">Змінити дані</button>                
+        </div>
+        <!-- ***********пошук клієнта************* -->
+        <div id="containerSearchClient">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Введіть ім'я клієнта</label>
+                    <input id="inputStateSearchFnameClient" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="FnameClient" placeholder="Введіть ім'я клієнта ">
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label class="font-weight-bold text-monospace" style="color:#9b9b9b; text-transform: uppercase;" for="inputState">Введіть прізвище клієнта</label>
+                    <input id="inputStateSearchLnameClient" type="text" class="form-control" style="background:#9b9b9b;"  aria-describedby="LnameClient" placeholder="Введіть прізвище клієнта">
+                    </select>
+                </div>
+            </div> 
+        </div>
+    </div>
+        
+
+    <div id = "centr-cont" class="centr-cont">
+
+        <div id="information">
+        <h5 class="font-weight-bold">система внутрішнього користування AUDI-Центру</h5>
+        <button id="controlBtnAuto" type="button" class="btn btn-secondary ">Авто</button>
+        <button id="controlBtnStaff" type="button" class="btn btn-secondary ">Співробітники</button>
+        <button id="controlBtnClient" type="button" class="btn btn-secondary ">Клієнти</button>
+        </div>
+        <br>
+        <div id="cars-container">
+            <script>
+            new GenerateAuto('getAllAuto');    
+            </script>
+        </div>
+    </div>  
+    <!-- *********************** -->
+
+    <script type="text/javascript" src="js/script_audiConnectContrPanCentrCont.js"></script> 
+    
+    
+    <!-- скрипт кнопки поиска авто -->
+    <script>
+        document.getElementById('searchCarBtn').onclick = function () {
+            document.getElementById("cars-container").innerHTML = '';
+            let model = document.getElementById('inputSearchModelAuto').value;
+            let engine = document.getElementById('inputSearchEngineCar').value;
+            let power = document.getElementById('inputSearchPowerCar').value;
+            let body = document.getElementById('inputSearchCarBody').value;
+            let color = document.getElementById('inputSearchColorCar').value;
+            let xhr = new XMLHttpRequest();
+            let path = '/api/get-client/?operation=searchAuto&model_auto=' + model + '&engine_car=' + engine + '&power_car=' + power + '&car_body=' + body + '&color_car=' + color;
+            xhr.open('POST', path, false);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); // Отправляем кодировку                
+            xhr.send(path);
+
+            if (xhr.status != 200) {
+                alert(xhr.status + ': ' + xhr.statusText + ' no answer');
+            } else {
+                console.log(xhr.responseText);
+                let arrResponseText = xhr.responseText.split(" ");
+                let i = 0;
+                
+                while (i < arrResponseText.length - 1) {
+                    new Auto(arrResponseText[i],
+                        arrResponseText[i + 2],
+                        arrResponseText[i + 1],
+                        arrResponseText[i + 8],
+                        arrResponseText[i + 6],
+                        arrResponseText[i + 5],
+                        arrResponseText[i + 4],
+                        arrResponseText[i + 3],
+                        arrResponseText[i + 7]);
+                    i += 9;
+                }
+            }
+        }
+        function getAllComponentsCar(nameComponent, containerElement) {
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '/api/get-client/?operation=' + nameComponent, false);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); // Отправляем кодировку                
+            xhr.send('/api/get-client/?operation=' + nameComponent);
+
+            if (xhr.status != 200) {
+                alert(xhr.status + ': ' + xhr.statusText + ' no answer');
+            } else {
+                console.log(xhr.responseText);
+                let arrResponseText = xhr.responseText.split(" ");
+                let i = 0;
+                let construction = '';
+                while (i < arrResponseText.length - 1) {
+                    new ComponentCar(arrResponseText[i], arrResponseText[i + 1], containerElement);
+                    i += 2;
+                }
+            }
+        }
+        getAllComponentsCar('getAllModelCars', 'inputSearchModelAuto');
+        getAllComponentsCar('GetAllEngineCar', 'inputSearchEngineCar');
+        getAllComponentsCar('GetAllPowerCar', 'inputSearchPowerCar');
+        getAllComponentsCar('GetAllTypeCarBody', 'inputSearchCarBody');
+        getAllComponentsCar('GetAllColorCar', 'inputSearchColorCar');
+    </script>
+
+
+   
+    <script type="text/javascript" src="js/script_audiConnectControlPanel.js"></script>
+
+        
+      <div id="arrowTop" hidden></div>
+
+      <script>
+
+        arrowTop.onclick = function() {
+          window.scrollTo(pageXOffset, 0);
+        };
+    
+        window.addEventListener('scroll', function() {
+          arrowTop.hidden = (pageYOffset < document.documentElement.clientHeight);
+        });
+      </script>
+    <div id="footer">&copy; Захищено HN </div>
+    
+</body>
+
+</html>
