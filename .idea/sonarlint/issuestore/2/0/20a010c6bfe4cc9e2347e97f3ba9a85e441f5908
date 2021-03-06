@@ -1,0 +1,22 @@
+
+~
+java:S1104"\Make engine_carString a static final constant or non-public and provide accessors if needed.(…êŒÃÿÿÿÿÿ8½û¢ùÿ.
+n	java:S116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¾­ûÿÿÿÿ8Äôùÿ.
+z	java:S116"YRename this field "year_issue_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò´ª˜úÿÿÿÿ8Äôùÿ.
+p	java:S116"TRename this field "power_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ï°’8Äôùÿ.
+o	java:S116"SRename this field "car_make" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ìá8Äôùÿ.
+u	java:S116"TRename this field "model_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ûøı·øÿÿÿÿ8Úñ¡ùÿ.
+x
+java:S1104"[Make model_carString a static final constant or non-public and provide accessors if needed.(‹®è²8½û¢ùÿ.
+u	java:S116"TRename this field "color_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òï–ûıÿÿÿÿ8Äôùÿ.
+v	java:S116"ZRename this field "color_carString" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜±›8½û¢ùÿ.
+x
+java:S1104"[Make color_carString a static final constant or non-public and provide accessors if needed.(˜±›8½û¢ùÿ.
+u	java:S116"TRename this field "car_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çíîÂıÿÿÿÿ8Äôùÿ.
+|
+java:S1104 "_Make type_car_bodyString a static final constant or non-public and provide accessors if needed.(ÂÅõ«8½û¢ùÿ.
+q	java:S116"URename this field "engine_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó×…8Äôùÿ.
+z	java:S116 "^Rename this field "type_car_bodyString" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÅõ«8½û¢ùÿ.
+t	java:S116"XRename this field "type_car_body" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ‚È¢8Äôùÿ.
+v	java:S116"ZRename this field "model_carString" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹®è²8½û¢ùÿ.
+|	java:S116"[Rename this field "engine_carString" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…êŒÃÿÿÿÿÿ8½û¢ùÿ.

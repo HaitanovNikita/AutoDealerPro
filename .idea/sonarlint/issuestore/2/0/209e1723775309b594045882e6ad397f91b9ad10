@@ -1,67 +1,0 @@
-
-7
-java:S1643"Use a StringBuilder instead.(„½¹å8¶—ˆ÷ÿ.
-7
-java:S1643"Use a StringBuilder instead.(ÙŒ×„8¶—ˆ÷ÿ.
-Y
-java:S4973"9Use the "equals" method if value comparison was intended.(ï“öîúÿÿÿÿ8¶—ˆ÷ÿ.
-S	java:S106"9Replace this use of System.out or System.err by a logger.(¸æÒŠ8¶—ˆ÷ÿ.
-P
-java:S1191"5Use classes from the Java API instead of Sun classes.(üÕÙä8¶—ˆ÷ÿ.
-r
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(¨ƒ×ùÿÿÿÿ8¶—ˆ÷ÿ.
-<
-java:S1643"Use a StringBuilder instead.(Ã×¡Éøÿÿÿÿ8¶—ˆ÷ÿ.
-6
-java:S3626"Remove this redundant jump.(ûÁİ…8¶—ˆ÷ÿ.
-w
-java:S1450"WRemove the "nameFile" field and declare it as a local variable in the relevant methods.(Åõµİûÿÿÿÿ8¶—ˆ÷ÿ.
-S	java:S106"9Replace this use of System.out or System.err by a logger.(©¥µ¯8¶—ˆ÷ÿ.
-e
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(œÊõœüÿÿÿÿ8¶—ˆ÷ÿ.
-O
-java:S3740"/Provide the parametrized type for this generic.(¨ÊúÁøÿÿÿÿ8¶—ˆ÷ÿ.
-G
-java:S1659"'Declare "operation" on a separate line.(öèÖ³úÿÿÿÿ8¶—ˆ÷ÿ.
-J
-java:S3740"/Provide the parametrized type for this generic.(şÉÂ¹8¶—ˆ÷ÿ.
-<
-java:S1643"Use a StringBuilder instead.(×Ñ¾Éúÿÿÿÿ8¶—ˆ÷ÿ.
-X	java:S106"9Replace this use of System.out or System.err by a logger.(‰û¦úÿÿÿÿ8¶—ˆ÷ÿ.
-<
-java:S1643"Use a StringBuilder instead.(–Š¦úÿÿÿÿ8¶—ˆ÷ÿ.
-6
-java:S3626"Remove this redundant jump.(ûÁİ…8¶—ˆ÷ÿ.
-v
-java:S1450"[Remove the "arrDataQuery" field and declare it as a local variable in the relevant methods.(ËÈãÌ8¶—ˆ÷ÿ.
-Q
-java:S1068"6Remove this unused "automobileDaoMySQl" private field.(ŞÆ8¶—ˆ÷ÿ.
-J
-java:S3010"/Remove this assignment of "automobileDaoMySQl".(èíœ8¶—ˆ÷ÿ.
-J
-java:S3740"/Provide the parametrized type for this generic.(ÔÊï8¶—ˆ÷ÿ.
-I
-java:S1125")Remove the literal "false" boolean value.(ûœÿçıÿÿÿÿ8¶—ˆ÷ÿ.
-[	java:S125"<This block of commented-out lines of code should be removed.(ÍîÜƒùÿÿÿÿ8¶—ˆ÷ÿ.
-a
-java:S1075"ARefactor your code to get this URI from a customizable parameter.(œÊõœüÿÿÿÿ8¶—ˆ÷ÿ.
-S	java:S106"9Replace this use of System.out or System.err by a logger.(Ò†›8¶—ˆ÷ÿ.
-<	java:S131""Add a default case to this switch.(ìè²ë8¶—ˆ÷ÿ.
-X	java:S106"9Replace this use of System.out or System.err by a logger.(¡Ú©£ÿÿÿÿÿ8¶—ˆ÷ÿ.
-S	java:S106"9Replace this use of System.out or System.err by a logger.(ô¤„å8¶—ˆ÷ÿ.
-R
-java:S1068"7Remove this unused "automobileArrayList" private field.(æÄ´Ó8¶—ˆ÷ÿ.
-7
-java:S1643"Use a StringBuilder instead.(Ï›·¤8¶—ˆ÷ÿ.
-X	java:S106"9Replace this use of System.out or System.err by a logger.(¡Ú©£ÿÿÿÿÿ8¶—ˆ÷ÿ.
-C
-java:S1125"(Remove the literal "true" boolean value.(ß—À¨8¶—ˆ÷ÿ.
-J
-java:S1611"/Remove the parentheses around the "s" parameter(Ò†›8¶—ˆ÷ÿ.
-J
-java:S3740"/Provide the parametrized type for this generic.(¤ã•÷8¶—ˆ÷ÿ.
-S	java:S106"9Replace this use of System.out or System.err by a logger.(å˜¹8¶—ˆ÷ÿ.
-<
-java:S1643"Use a StringBuilder instead.(¤¼¾Òøÿÿÿÿ8¶—ˆ÷ÿ.
-<
-java:S1643"Use a StringBuilder instead.(§ø‡¦üÿÿÿÿ8¶—ˆ÷ÿ.

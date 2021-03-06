@@ -1,11 +1,13 @@
 package autodealer.com.logic.service;
 
-import javax.validation.constraints.NotNull;
-import java.util.List;
+import autodealer.com.logic.dto.AutomobileDTO;
 
-public interface AutomobileService<T> {
+public interface AutomobileService extends AutoDealerCRUDService<AutomobileDTO> {
 
-    List<T> queryAboutAuto(@NotNull String querySqlString);
 
-    List<T> getMostPopularAuto();
+    AutomobileDTO getMostPopularAuto();
+    void deleteByID(long id);
+    String getSalesProfitForTheGap(String fromDate,String forDate);
+    AutomobileDTO findById(Long id);
+    AutomobileDTO findByYear_issue_car(String yearIssueCar);
 }

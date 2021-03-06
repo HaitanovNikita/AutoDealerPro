@@ -1,6 +1,12 @@
 package autodealer.com.logic.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
+
 
 @Entity
 @Table(name = "Automobile")
@@ -27,6 +33,10 @@ import javax.persistence.*;
                 + " inner join ColorCar c on a.color_car = c.ID "
                 + " inner join TypeCarBody  t on a.type_car_body = t.ID"),
 })
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
 public class Automobile {
 
     public String model_carString;

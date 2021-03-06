@@ -33,7 +33,7 @@ public class Server {
     private static ArrayList<Automobile> automobileArrayList;
 
     public Server() {
-        automobileDaoMySQl = new AutomobileDaoMySQl();
+        automobileDaoMySQl = new AutomobileDaoMySQl(automobileRepository);
         starting();
     }
 
@@ -193,7 +193,7 @@ public class Server {
                 case "searchAuto":
                     arrSplitQuery = query.split("operation=|&model_auto=|&engine_car=|&power_car=|&car_body=|&color_car=");
                     System.out.println(Arrays.toString(arrSplitQuery));
-                    AutomobileDaoMySQl automobileDaoMySQl = new AutomobileDaoMySQl();
+                    AutomobileDaoMySQl automobileDaoMySQl = new AutomobileDaoMySQl(automobileRepository);
                     String queryTodb = Utilites.queryGetAllCars + " where a.model_car = " + arrSplitQuery[2] +
                             " and a.engine_car=" + arrSplitQuery[3] +
                             " and a.power_car =" + arrSplitQuery[4] +
@@ -202,17 +202,17 @@ public class Server {
                     answer = buildAnswerAuto(automobileDaoMySQl.queryAboutAuto(queryTodb), CAR_NOT_FOUND);
                     break;
                 case "getMostPopularAuto":
-                    Automobile a = new AutomobileDaoMySQl().getMostPopularAuto().get(0);
+                    Automobile a = new AutomobileDaoMySQl(automobileRepository).getMostPopularAuto().get(0);
                     answer = a.getId() + " " + a.getCar_make() + " " + a.getCar_price() + " " +
                             a.color_carString + " " + a.engine_carString + " " + a.model_carString + " " +
                             a.getPower_car() + " " + a.type_car_bodyString + " " + a.getYear_issue_car() + " ";
                     break;
                 case "getSalesProfit":
                     arrSplitQuery = query.split("operation=|&from=|&for=");
-                    answer = new AutomobileDaoMySQl().getSalesProfitForTheGap(arrSplitQuery[2], arrSplitQuery[3]);
+                    answer = new AutomobileDaoMySQl(automobileRepository).getSalesProfitForTheGap(arrSplitQuery[2], arrSplitQuery[3]);
                     break;
                 case "getAllAuto":
-                    AutomobileDaoMySQl automobileDaoMySQl1 = new AutomobileDaoMySQl();
+                    AutomobileDaoMySQl automobileDaoMySQl1 = new AutomobileDaoMySQl(automobileRepository);
                     answer = buildAnswerAuto(automobileDaoMySQl1.readAllAutomobiles(), "Виникла проблема, спробуйте пізніше");
                     break;
                 case "getAllClient":
@@ -254,7 +254,7 @@ public class Server {
                                 Integer.parseInt(arrSplitQuery[8]),
                                 Integer.parseInt(arrSplitQuery[9]),
                                 Integer.parseInt(arrSplitQuery[10]));
-                        new AutomobileDaoMySQl().updateAutomobile(automobile);
+                        new AutomobileDaoMySQl(automobileRepository).updateAutomobile(automobile);
                         answer = CHANGES_MADE_SUCCESS;
                     } catch (Exception e) {
                         answer = ERROR_ENTERING_DATA;
@@ -264,7 +264,7 @@ public class Server {
                 case "getAutos":
                     arrSplitQuery = query.split("&id_model=");
                     Arrays.stream(arrSplitQuery).forEach((s) -> System.out.println("arrays: " + s));
-                    AutomobileDaoMySQl autoDaoMySQl = new AutomobileDaoMySQl();
+                    AutomobileDaoMySQl autoDaoMySQl = new AutomobileDaoMySQl(automobileRepository);
                     String queryToDb = Utilites.queryGetAllCars + " where a.model_car = " + arrSplitQuery[1];
                     answer = buildAnswerAuto(autoDaoMySQl.queryAboutAuto(queryToDb), NO_CARS_FOR_SALES);
                     System.err.println("GET AUTOS: "+ answer);

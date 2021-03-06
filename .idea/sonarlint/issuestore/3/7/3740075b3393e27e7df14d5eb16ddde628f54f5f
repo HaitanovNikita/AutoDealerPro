@@ -1,0 +1,5 @@
+
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š‡²æ8§è†¤€/
+Â
+java:S1845"¤Rename method "deleteByID" to prevent any misunderstanding/clash with method "deleteById" defined in interface "org.springframework.data.repository.CrudRepository".(ü²Ö€8€“¾ €/
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ®å<8ë²›¡€/

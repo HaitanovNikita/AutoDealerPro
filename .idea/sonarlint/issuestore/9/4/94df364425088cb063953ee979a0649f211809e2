@@ -1,0 +1,11 @@
+
+y	java:S116"XRename this field "manager_login" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±í§×ûÿÿÿÿ8’¬ùÿ.
+t	java:S116"XRename this field "manager_lname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€§Œò8’¬ùÿ.
+}	java:S116"\Rename this field "manager_phone_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×÷ô¸ÿÿÿÿÿ8’¬ùÿ.
+w	java:S116"VRename this field "manager_age" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïÔ™Éûÿÿÿÿ8’¬ùÿ.
+s	java:S116"WRename this field "manager_pass" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘¤Ò–8’¬ùÿ.
+y	java:S116"XRename this field "manager_fname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø™º¯øÿÿÿÿ8’¬ùÿ.
+u	java:S116"YRename this field "manager_gender" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áÿøñ8’¬ùÿ.
+s	java:S116"WRename this field "manager_post" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ÖÁÍ8’¬ùÿ.
+i	java:S116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÌèš8’¬ùÿ.
+t	java:S116"XRename this field "manager_email" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óö¡³8’¬ùÿ.
