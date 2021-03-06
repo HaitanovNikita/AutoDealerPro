@@ -1,46 +1,34 @@
-
 package autodealer.com.logic.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "TypeCarBody")
-public class TypeCarBody {
+@AllArgsConstructor
+@Data
+@Builder
+@NoArgsConstructor
+public class TypeCarBody implements Serializable {
 
-	private int ID;
-	private String type_body;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ID")
+    private int ID;
+    @Column(name = "type_body")
+    private String type_body;
 
-	public TypeCarBody() {
-		
-	}
-	
-	public TypeCarBody(int iD, String type_body) {
-		ID = iD;
-		this.type_body = type_body;
-	}
-
-	@Id
-	@JoinColumn(name="ID")
-	public int getID() {
-		return ID;
-	}
-
-	@Column(name="type_body")
-	public String getType_body() {
-		return type_body;
-	}
-
-	public void setID(int iD) {
-		ID = iD;
-	}
-
-	public void setType_body(String type_body) {
-		this.type_body = type_body;
-	}
-
-
-	@Override
-	public String toString() {
-		return ID + " " + type_body;
-	}
+    //    @OneToOne(mappedBy = "type_car_body")
+//    private Automobile automobile;
+    @OneToMany(mappedBy = "type_car_body",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY)
+    private List<Automobile> automobileList = new ArrayList<>();
 }

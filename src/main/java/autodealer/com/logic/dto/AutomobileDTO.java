@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 public class AutomobileDTO {
 
     @NotNull
-    private Integer ID;
+    private long ID;
     @NotNull
     private long car_price;
     @NotNull
@@ -19,10 +19,10 @@ public class AutomobileDTO {
     @NotNull
     private String year_issue_car;
     @NotNull
-    private Integer power_car;
-    private long model_car;
-    private long engine_car;
-    private long color_car;
-    private long type_car_body;
+    private int power_car;
+    private String model_car;
+    private String engine_car;
+    private String color_car;
+    private String type_car_body;
 
 }

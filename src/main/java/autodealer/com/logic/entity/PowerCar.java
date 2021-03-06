@@ -1,47 +1,31 @@
 package autodealer.com.logic.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "PowerCar")
-public class PowerCar {
-	
-	private int ID;
-	private int horse_power;
-	
-	public PowerCar() {
-		
-	}
-	
-	public PowerCar(int iD, int horse_power) {
-		super();
-		ID = iD;
-		this.horse_power = horse_power;
-	}
+@AllArgsConstructor
+@Data
+@Builder
+@NoArgsConstructor
+public class PowerCar implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ID")
+    private int ID;
+    @Column(name = "horse_power")
+    private int horse_power;
 
-	
-	@Id
-	@JoinColumn(name = "ID")
-	public int getID() {
-		return ID;
-	}
-
-	@Column(name="horse_power")
-	public int getHorse_power() {
-		return horse_power;
-	}
-
-	public void setID(int iD) {
-		ID = iD;
-	}
-
-	public void setHorse_power(int horse_power) {
-		this.horse_power = horse_power;
-	}
-
-
-	@Override
-	public String toString() {
-		return ID + " " + horse_power;
-	}
+    @OneToMany(mappedBy = "power_car",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY)
+    private List<Automobile> automobileList = new ArrayList<>();
 }

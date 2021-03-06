@@ -30,8 +30,8 @@ public class AutomobileController {
             @ApiResponse(code = 201, message = "Successfully created new Auto"),
             @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
     })
-    public ResponseEntity<AutomobileDTO> save(@RequestBody AutomobileDTO automobileDTO){
-         return new ResponseEntity<>(automobileService.save(automobileDTO), HttpStatus.OK);
+    public ResponseEntity<AutomobileDTO> save(@RequestBody AutomobileDTO automobileDTO) {
+        return new ResponseEntity<>(automobileService.save(automobileDTO), HttpStatus.OK);
     }
 
     @ApiOperation(value = "Delete auto by id")
@@ -51,28 +51,24 @@ public class AutomobileController {
     @ApiOperation(value = "Read all auto")
     @GetMapping(value = "/readAll", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<AutomobileDTO>> readAllAuto() {
-        return new ResponseEntity<>(automobileService.readAll(),HttpStatus.OK);
+        return new ResponseEntity<>(automobileService.readAll(), HttpStatus.OK);
     }
 
     @ApiOperation(value = "Get popular auto")
     @GetMapping(value = "/mostPopularAuto", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AutomobileDTO> mostPopularAuto() {
-        return new ResponseEntity<>(automobileService.getMostPopularAuto(),HttpStatus.OK);
+        return new ResponseEntity<>(automobileService.getMostPopularAuto(), HttpStatus.OK);
     }
 
     @ApiOperation(value = "Get profit to the gap")
     @GetMapping(value = "/profitGap/fromDate/{fromDate}/forDate/{forDate}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> profitForTheGap(@PathVariable("fromDate")String fromDate, @PathVariable("forDate")String forDate) {
-        return new ResponseEntity<>(automobileService.getSalesProfitForTheGap(fromDate,forDate),HttpStatus.OK);
+    public ResponseEntity<String> profitForTheGap(@PathVariable("fromDate") String fromDate, @PathVariable("forDate") String forDate) {
+        return new ResponseEntity<>(automobileService.getSalesProfitForTheGap(fromDate, forDate), HttpStatus.OK);
     }
 
     @ApiOperation(value = "Find auto by id")
     @GetMapping("/findById/{id}")
-    public ResponseEntity<AutomobileDTO> findById(@PathVariable("id")Long id) {
-        return new ResponseEntity<>(automobileService.findById(id),HttpStatus.OK);
+    public ResponseEntity<AutomobileDTO> findById(@PathVariable("id") Long id) {
+        return new ResponseEntity<>(automobileService.findById(id), HttpStatus.OK);
     }
-
-
-
-
 }

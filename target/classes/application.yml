@@ -1,8 +1,17 @@
 spring:
   application:
     name: AutoDealerPro
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
   datasource:
     url: jdbc:mysql://localhost:3306/cardealer
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password:
+#spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

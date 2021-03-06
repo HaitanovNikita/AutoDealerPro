@@ -53,7 +53,7 @@ public class AutomobileServiceImpl implements AutomobileService {
 
     @Override
     public String getSalesProfitForTheGap(String fromDate, String forDate) {
-        return getSalesProfitForTheGap(fromDate, forDate);
+        return automobileDaoMySQl.getSalesProfitForTheGap(fromDate, forDate);
     }
 
     @Override
