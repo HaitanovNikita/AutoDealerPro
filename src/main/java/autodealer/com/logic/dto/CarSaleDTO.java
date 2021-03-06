@@ -6,7 +6,6 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 @RequiredArgsConstructor
-@NoArgsConstructor
 public class CarSaleDTO {
     private int ID;
     private int ID_car;

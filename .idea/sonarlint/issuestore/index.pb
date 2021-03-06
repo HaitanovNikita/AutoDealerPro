@@ -2,8 +2,6 @@
 A
 static/index.html,b\d\bd1335292519bbb90a7518e3aee1539f47a6149f
 T
-$src/main/resources/hibernate.cfg.xml,3\1\3176feae82bf4ff4f68f72c9d6d3b850a3110c22
-T
 $.idea/artifacts/AutoDealer_3_jar.xml,b\7\b78a7edf212345b8814742cb997d9eeb89b47fd2
 T
 $.idea/codeStyles/codeStyleConfig.xml,d\d\dd7b3350c29c49497756c7f32c69a3bed18b1cba

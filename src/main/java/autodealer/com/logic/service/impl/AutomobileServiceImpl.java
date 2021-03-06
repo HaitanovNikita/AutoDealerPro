@@ -35,7 +35,7 @@ public class AutomobileServiceImpl implements AutomobileService {
     @Override
     public List<AutomobileDTO> readAll() {
         return automobileDaoMySQl
-                .findAll()
+                .readAll()
                 .stream()
                 .map(Converter::convertEntityToDto)
                 .collect(Collectors.toList());
@@ -61,8 +61,8 @@ public class AutomobileServiceImpl implements AutomobileService {
         return Converter.convertEntityToDto(automobileDaoMySQl.findById(id));
     }
 
-    @Override
-    public AutomobileDTO findByYear_issue_car(String yearIssueCar) {
-        return Converter.convertEntityToDto(automobileDaoMySQl.findByYear_issue_car(yearIssueCar));
-    }
+//    @Override
+//    public AutomobileDTO findByYear_issue_car(String yearIssueCar) {
+//        return Converter.convertEntityToDto(automobileDaoMySQl.findByYear_issue_car(yearIssueCar));
+//    }
 }

@@ -8,10 +8,10 @@ public class Converter {
      public static Automobile convertDtoToEntity(AutomobileDTO automobileDTO){
         return Automobile
                 .builder()
-                .model_carString(automobileDTO.model_carString)
-                .engine_carString(automobileDTO.engine_carString)
-                .color_carString(automobileDTO.color_carString)
-                .type_car_bodyString(automobileDTO.type_car_bodyString)
+//                .model_carString(automobileDTO.model_carString)
+//                .engine_carString(automobileDTO.engine_carString)
+//                .color_carString(automobileDTO.color_carString)
+//                .type_car_bodyString(automobileDTO.type_car_bodyString)
                 .ID(automobileDTO.getID())
                 .car_price(automobileDTO.getCar_price())
                 .car_make(automobileDTO.getCar_make())
@@ -26,10 +26,10 @@ public class Converter {
     public static AutomobileDTO convertEntityToDto(Automobile automobile){
          return AutomobileDTO
                  .builder()
-                 .model_carString(automobile.model_carString)
-                 .engine_carString(automobile.engine_carString)
-                 .color_carString(automobile.color_carString)
-                 .type_car_bodyString(automobile.type_car_bodyString)
+//                 .model_carString(automobile.model_carString)
+//                 .engine_carString(automobile.engine_carString)
+//                 .color_carString(automobile.color_carString)
+//                 .type_car_bodyString(automobile.type_car_bodyString)
                  .ID(automobile.getId())
                  .car_price(automobile.getCar_price())
                  .car_make(automobile.getCar_make())

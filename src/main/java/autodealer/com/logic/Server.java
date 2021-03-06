@@ -1,33 +1,9 @@
 package autodealer.com.logic;
 
-import autodealer.com.logic.dao.impl.AutomobileDaoMySQl;
-import autodealer.com.logic.dao.impl.ClientDaoMySql;
-import autodealer.com.logic.dao.impl.MachinePartsDaoMySql;
-import autodealer.com.logic.dao.impl.ManagerDaoMySql;
-import autodealer.com.logic.entity.*;
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
-import com.sun.net.httpserver.HttpServer;
-
-import java.io.IOException;
-import java.io.OutputStream;
-import java.net.InetSocketAddress;
-import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.concurrent.Executors;
-
-import static autodealer.com.logic.config.Constant.*;
-import static autodealer.com.logic.utils.Utils.colorPrintln;
-
 
 public class Server {
 
-    //private final static String PATH_FILE = "C:\\Users\\User\\IdeaProjects\\AutoDealer_3\\static";
+/*    //private final static String PATH_FILE = "C:\\Users\\User\\IdeaProjects\\AutoDealer_3\\static";
     private final static String PATH_FILE = "C:\\Users\\nhaitanov\\java workspaces\\IdeaProjects\\AutoDealer_3\\static";
     private static AutomobileDaoMySQl automobileDaoMySQl;
     private static ArrayList<Automobile> automobileArrayList;
@@ -346,5 +322,5 @@ public class Server {
         }
 
 
-    }
+    }*/
 }

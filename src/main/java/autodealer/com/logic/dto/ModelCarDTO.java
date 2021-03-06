@@ -6,7 +6,6 @@ import lombok.*;
 @Builder
 @AllArgsConstructor
 @RequiredArgsConstructor
-@NoArgsConstructor
 public class ModelCarDTO {
     private int ID;
     private String name_model;

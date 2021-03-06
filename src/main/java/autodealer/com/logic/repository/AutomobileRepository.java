@@ -8,13 +8,11 @@ import java.util.Optional;
 
 public interface AutomobileRepository extends CrudRepository<Automobile, Long>, Repository<Automobile, Long> {
 
-    Iterable<Automobile> findAllByYear_issue_car(String yearIssueCar);
-
-    String getSalesProfitForTheGap(String fromDate,String forDate);
+    Iterable<Automobile> findAll();
 
     Optional<Automobile> findById(Long id);
 
-    Optional<Automobile> findByYear_issue_car(String yearIssueCar);
+//    Optional<Automobile> findByYear_issue_car(String year_issue_car);
 
-    void deleteByID(long id);
+//    void deleteById(long id);
 }

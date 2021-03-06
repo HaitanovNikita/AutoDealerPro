@@ -9,5 +9,5 @@ public interface AutomobileService extends AutoDealerCRUDService<AutomobileDTO> 
     void deleteByID(long id);
     String getSalesProfitForTheGap(String fromDate,String forDate);
     AutomobileDTO findById(Long id);
-    AutomobileDTO findByYear_issue_car(String yearIssueCar);
+//    AutomobileDTO findByYear_issue_car(String yearIssueCar);
 }

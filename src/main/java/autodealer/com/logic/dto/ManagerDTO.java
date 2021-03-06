@@ -8,7 +8,6 @@ import javax.validation.constraints.NotNull;
 @Builder
 @AllArgsConstructor
 @RequiredArgsConstructor
-@NoArgsConstructor
 public class ManagerDTO {
     @NotNull
     private int ID;

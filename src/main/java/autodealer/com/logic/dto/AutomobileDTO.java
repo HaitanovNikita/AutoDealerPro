@@ -8,7 +8,6 @@ import javax.validation.constraints.NotNull;
 @Builder
 @AllArgsConstructor
 @RequiredArgsConstructor
-@NoArgsConstructor
 public class AutomobileDTO {
 
     @NotNull
@@ -26,8 +25,4 @@ public class AutomobileDTO {
     private long color_car;
     private long type_car_body;
 
-    public String model_carString;
-    public String engine_carString;
-    public String color_carString;
-    public String type_car_bodyString;
 }

@@ -1,6 +1,7 @@
 package autodealer.com.logic.dao.impl;
 
 import autodealer.com.logic.dao.AutomobileDao;
+import autodealer.com.logic.dto.AutomobileModelDTO;
 import autodealer.com.logic.entity.Automobile;
 import autodealer.com.logic.repository.AutomobileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,14 +32,19 @@ public class AutomobileDaoMySQl implements AutomobileDao{
     }
 
     @Override
-    public List<Automobile> findAll() {
+    public List<Automobile> readAll() {
         return (ArrayList) automobileRepository.findAll();
+    }
+
+    @Override
+    public List<AutomobileModelDTO> readAllModel() {
+        return null;
     }
 
     @Override
     public Automobile getMostPopularAuto() {
 
-        Long id = entityManager.createQuery("select count(cs.ID_car) from CarSale as cs group by cs.ID_car order by count(cs.ID_car) DESC", Long.class).getSingleResult();
+        Long id = entityManager.createQuery("Select count(cs.ID_car) from CarSale as cs group by cs.ID_car order by count(cs.ID_car) DESC", Long.class).getSingleResult();
         Automobile res2 = entityManager.createQuery("Select cs.ID_car from CarSale as cs group by ID_car having count(cs.ID_car) = " + id, Automobile.class).getSingleResult();
 
         String queryForGetMostPopularAuto = "Select aut.id, aut.car_price, aut.car_make, aut.year_issue_car, pc.horse_power, mc.name_model, ec.type_engine, cc.color_car, tcb.type_body from Automobile as aut inner join ModelCar as mc on aut.model_car = mc.ID inner join PowerCar as pc on  aut.power_car = pc.ID inner join EngineCar as ec on  aut.engine_car = ec.ID inner join ColorCar as cc on aut.color_car = cc.ID inner join TypeCarBody as tcb on aut.type_car_body= tcb.ID where aut.id =";
@@ -48,7 +54,7 @@ public class AutomobileDaoMySQl implements AutomobileDao{
 
     @Override
     public void deleteByID(long id) {
-        automobileRepository.deleteByID(id);
+        automobileRepository.deleteById(id);
     }
 
     @Override
@@ -63,10 +69,10 @@ public class AutomobileDaoMySQl implements AutomobileDao{
         return automobileRepository.findById(id).get();
     }
 
-    @Override
-    public Automobile findByYear_issue_car(String yearIssueCar) {
-        return automobileRepository.findByYear_issue_car(yearIssueCar).get();
-    }
+//    @Override
+//    public Automobile findByYear_issue_car(String yearIssueCar) {
+//        return automobileRepository.findByYear_issue_car(yearIssueCar).get();
+//    }
 
 
 

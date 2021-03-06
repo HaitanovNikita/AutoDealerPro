@@ -3,14 +3,13 @@ package autodealer.com.logic.entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 
 @Entity
 @Table(name = "Automobile")
-@NamedQueries({
+/*@NamedQueries({
         @NamedQuery(name = "Automobile.auxiliaryQuery1", query = "Select cs.ID_car from CarSale as cs group by ID_car having count(cs.ID_car) = :id"),
         @NamedQuery(name = "Automobile.auxiliaryQuery2", query = "Select count(cs.ID_car) from CarSale as cs group by cs.ID_car order by count(cs.ID_car) DESC"),
         @NamedQuery(name = "Automobile.getSalesProfitForTheGap", query = "Select sum(auto.car_price) from CarSale as cs inner join Automobile as auto on auto.id = cs.ID_car " + " where cs.date_sale_car between :fromDate and :forDate"),//TODO передавать дату в формате строки в одинарных кавычках
@@ -32,17 +31,16 @@ import javax.persistence.*;
                 + " inner join EngineCar e on a.engine_car = e.ID "
                 + " inner join ColorCar c on a.color_car = c.ID "
                 + " inner join TypeCarBody  t on a.type_car_body = t.ID"),
-})
+})*/
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
 @Builder
 public class Automobile {
 
-    public String model_carString;
-    public String engine_carString;
-    public String color_carString;
-    public String type_car_bodyString;
+//    public String model_carString;
+//    public String engine_carString;
+//    public String color_carString;
+//    public String type_car_bodyString;
     private Integer ID;
     private long car_price;
     private String car_make;
@@ -56,30 +54,17 @@ public class Automobile {
     public Automobile() {
     }
 
-    public Automobile(Integer id, long car_price, String car_make, long model_car, String year_issue_car,
-                      Integer power_car, long engine_car, long color_car, long type_car_body) {
-        this.ID = id;
-        this.car_price = car_price;
-        this.car_make = car_make;
-        this.model_car = model_car;
-        this.year_issue_car = year_issue_car;
-        this.power_car = power_car;
-        this.engine_car = engine_car;
-        this.color_car = color_car;
-        this.type_car_body = type_car_body;
-    }
-
-    public Automobile(Integer iD, long car_price, String car_make, String year_issue_car, Integer power_car,
-                      String model_carString, String engine_carString, String color_carString, String type_car_bodyString) {
+    public Automobile(Integer iD, long car_price, String car_make, String year_issue_car, Integer power_car
+                      /*String model_carString, String engine_carString, String color_carString, String type_car_bodyString*/) {
         this.ID = iD;
         this.car_price = car_price;
         this.car_make = car_make;
         this.year_issue_car = year_issue_car;
         this.power_car = power_car;
-        this.model_carString = model_carString;
+        /*this.model_carString = model_carString;
         this.engine_carString = engine_carString;
         this.color_carString = color_carString;
-        this.type_car_bodyString = type_car_bodyString;
+        this.type_car_bodyString = type_car_bodyString;*/
     }
 
     @Id
@@ -146,7 +131,7 @@ public class Automobile {
     }
 
     @Column(name = "power_car")
-    public long getPower_car() {
+    public Integer getPower_car() {
         return power_car;
     }
 
@@ -191,8 +176,8 @@ public class Automobile {
         if (type_car_body == 0 && color_car == 0) {
             return "Automobile №" + ID + " \n[\n" + "ID=" + ID + ",\n" + "car_price=" + car_price + ",\n" + "car_make=" + car_make + ",\n"
                     + "year_issue_car=" + year_issue_car + ",\n" + "power_car=" + power_car + ",\n" + "model_carString="
-                    + model_carString + ",\n" + "engine_carString=" + engine_carString + ",\n" + "color_carString="
-                    + color_carString + ",\ntype_car_bodyString=" + type_car_bodyString + "\n]\n";
+                    /*+ model_carString + ",\n" + "engine_carString=" + engine_carString + ",\n" + "color_carString="
+                    + color_carString + ",\ntype_car_bodyString=" + type_car_bodyString + "\n]\n"*/;
         } else {
             return "Automobile №" + ID + "\n[\n" + "ID=" + ID + ",\n" + "car_price=" + car_price + ",\n" + "car_make=" + car_make + ",\n"
                     + "model_car=" + model_car + ",\n" + "year_issue_car=" + year_issue_car + ",\n" + "power_car="
