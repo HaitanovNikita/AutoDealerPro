@@ -20,12 +20,10 @@ public class ColorCar implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID")
-    private int ID;
+    private Long ID;
     @Column(name = "color_car")
     private String color_car;
 
-    //    @OneToOne(mappedBy = "color_car")
-//    private Automobile automobile;
     @OneToMany(mappedBy = "color_car",
             cascade = CascadeType.ALL,
             fetch = FetchType.EAGER)

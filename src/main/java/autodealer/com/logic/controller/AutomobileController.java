@@ -31,7 +31,7 @@ public class AutomobileController {
             @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
     })
     public ResponseEntity<AutomobileDTO> save(@RequestBody AutomobileDTO automobileDTO) {
-        return new ResponseEntity<>(automobileService.save(automobileDTO), HttpStatus.OK);
+        return new ResponseEntity<>(automobileService.create(automobileDTO), HttpStatus.OK);
     }
 
     @ApiOperation(value = "Delete auto by id")
@@ -61,13 +61,13 @@ public class AutomobileController {
     }
 
     @ApiOperation(value = "Get profit to the gap")
-    @GetMapping(value = "/profitGap/fromDate/{fromDate}/forDate/{forDate}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/profit/fromDate/{fromDate}/forDate/{forDate}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> profitForTheGap(@PathVariable("fromDate") String fromDate, @PathVariable("forDate") String forDate) {
         return new ResponseEntity<>(automobileService.getSalesProfitForTheGap(fromDate, forDate), HttpStatus.OK);
     }
 
     @ApiOperation(value = "Find auto by id")
-    @GetMapping("/findById/{id}")
+    @GetMapping("/find/id/{id}")
     public ResponseEntity<AutomobileDTO> findById(@PathVariable("id") Long id) {
         return new ResponseEntity<>(automobileService.findById(id), HttpStatus.OK);
     }

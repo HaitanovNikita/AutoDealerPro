@@ -1,7 +1,7 @@
 package autodealer.com.logic.service.impl;
 
 import autodealer.com.logic.dao.converter.Converter;
-import autodealer.com.logic.dao.impl.AutomobileDaoMySQl;
+import autodealer.com.logic.dao.impl.AutomobileDaoImpl;
 import autodealer.com.logic.dto.AutomobileDTO;
 import autodealer.com.logic.service.AutomobileService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,15 +15,15 @@ import java.util.stream.Collectors;
 @Transactional
 public class AutomobileServiceImpl implements AutomobileService {
 
-    private final AutomobileDaoMySQl automobileDaoMySQl;
+    private final AutomobileDaoImpl automobileDaoMySQl;
 
     @Autowired
-    public AutomobileServiceImpl(AutomobileDaoMySQl automobileDaoMySQl) {
+    public AutomobileServiceImpl(AutomobileDaoImpl automobileDaoMySQl) {
         this.automobileDaoMySQl = automobileDaoMySQl;
     }
 
     @Override
-    public AutomobileDTO save(AutomobileDTO automobileDTO) {
+    public AutomobileDTO create(AutomobileDTO automobileDTO) {
         return Converter.convertEntityToDto(automobileDaoMySQl.save(Converter.convertDtoToEntity(automobileDTO)));
     }
 
@@ -61,8 +61,4 @@ public class AutomobileServiceImpl implements AutomobileService {
         return Converter.convertEntityToDto(automobileDaoMySQl.findById(id));
     }
 
-//    @Override
-//    public AutomobileDTO findByYear_issue_car(String yearIssueCar) {
-//        return Converter.convertEntityToDto(automobileDaoMySQl.findByYear_issue_car(yearIssueCar));
-//    }
 }

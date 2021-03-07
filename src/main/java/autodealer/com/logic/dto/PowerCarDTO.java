@@ -7,6 +7,6 @@ import lombok.*;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class PowerCarDTO {
-    private int ID;
+    private Long ID;
     private int horse_power;
 }

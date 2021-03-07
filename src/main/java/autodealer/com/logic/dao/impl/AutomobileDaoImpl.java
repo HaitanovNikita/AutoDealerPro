@@ -1,7 +1,6 @@
 package autodealer.com.logic.dao.impl;
 
 import autodealer.com.logic.dao.AutomobileDao;
-import autodealer.com.logic.dto.AutomobileModelDTO;
 import autodealer.com.logic.entity.Automobile;
 import autodealer.com.logic.repository.AutomobileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,14 +12,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class AutomobileDaoMySQl implements AutomobileDao {
+public class AutomobileDaoImpl implements AutomobileDao {
 
     private final AutomobileRepository automobileRepository;
     @PersistenceContext
     private EntityManager entityManager;
 
     @Autowired
-    public AutomobileDaoMySQl(AutomobileRepository automobileRepository) {
+    public AutomobileDaoImpl(AutomobileRepository automobileRepository) {
         this.automobileRepository = automobileRepository;
     }
 
@@ -33,11 +32,6 @@ public class AutomobileDaoMySQl implements AutomobileDao {
     @Override
     public List<Automobile> readAll() {
         return (ArrayList) automobileRepository.findAll();
-    }
-
-    @Override
-    public List<AutomobileModelDTO> readAllModel() {
-        return null;
     }
 
     @Override

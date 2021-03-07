@@ -20,7 +20,7 @@ public class PowerCar implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID")
-    private int ID;
+    private Long ID;
     @Column(name = "horse_power")
     private int horse_power;
 

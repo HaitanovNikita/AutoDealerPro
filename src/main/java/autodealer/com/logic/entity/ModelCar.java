@@ -21,7 +21,7 @@ public class ModelCar implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID")
-    private int ID;
+    private Long ID;
     @Column(name = "name_model")
     private String name_model;
 

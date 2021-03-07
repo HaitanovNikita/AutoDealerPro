@@ -7,6 +7,6 @@ import lombok.*;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class EngineCarDTO {
-    private int ID;
+    private Long ID;
     private String type_engine;
 }

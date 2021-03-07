@@ -21,7 +21,7 @@ public class EngineCar implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID")
-    private int ID;
+    private Long ID;
     @Column(name = "type_engine")
     private String type_engine;
 

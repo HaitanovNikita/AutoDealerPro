@@ -7,6 +7,6 @@ import lombok.*;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class TypeCarBodyDTO {
-    private int ID;
+    private Long ID;
     private String type_body;
 }

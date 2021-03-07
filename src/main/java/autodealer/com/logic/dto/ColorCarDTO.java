@@ -7,6 +7,6 @@ import lombok.*;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class ColorCarDTO {
-    private int ID;
+    private Long ID;
     private String color_car;
 }

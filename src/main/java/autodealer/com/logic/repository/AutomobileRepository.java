@@ -11,8 +11,4 @@ public interface AutomobileRepository extends CrudRepository<Automobile, Long>, 
     Iterable<Automobile> findAll();
 
     Optional<Automobile> findById(Long id);
-
-//    Optional<Automobile> findByYear_issue_car(String year_issue_car);
-
-//    void deleteById(long id);
 }

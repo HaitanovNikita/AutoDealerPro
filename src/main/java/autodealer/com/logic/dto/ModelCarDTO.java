@@ -7,6 +7,6 @@ import lombok.*;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class ModelCarDTO {
-    private int ID;
+    private Long ID;
     private String name_model;
 }
