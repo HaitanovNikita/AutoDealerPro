@@ -1,43 +1,4 @@
 
-U
-java:S4973Æ"9Use the "equals" method if value comparison was intended.(ÔìˆÓ˙ˇˇˇˇ
-E
-java:S3010$"/Remove this assignment of "automobileDaoMySQl".(ËÌÅú
-n
-java:S3776π"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(®çÉ◊˘ˇˇˇˇ
-F
-java:S1611ä"/Remove the parentheses around the "s" parameter(“ùÜõ
-s
-java:S1450¶"WRemove the "nameFile" field and declare it as a local variable in the relevant methods.(≈ıµ›˚ˇˇˇˇ
-O	java:S106é"9Replace this use of System.out or System.err by a logger.(©•µØ
-O	java:S106ä"9Replace this use of System.out or System.err by a logger.(“ùÜõ
-T	java:S106√"9Replace this use of System.out or System.err by a logger.(°⁄©£ˇˇˇˇˇ
-R
-java:S1191"5Use classes from the Java API instead of Sun classes.(¸’Ÿ‰8ûπÙ¯ˇ.
-2
-java:S3626‘"Remove this redundant jump.(˚¡›Ö
-C
-java:S1659ª"'Declare "operation" on a separate line.(ˆË÷≥˙ˇˇˇˇ
-M
-java:S1068!"7Remove this unused "automobileArrayList" private field.(Êƒ¥”
-N	java:S106q"9Replace this use of System.out or System.err by a logger.(∏Ê“ä
-`
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ú ıú¸ˇˇˇˇ
-\
-java:S1075"ARefactor your code to get this URI from a customizable parameter.(ú ıú¸ˇˇˇˇ
->
-java:S1125T"(Remove the literal "true" boolean value.(ﬂó¿®
-q
-java:S1450L"[Remove the "arrDataQuery" field and declare it as a local variable in the relevant methods.(À»„Ã
-V	java:S125"<This block of commented-out lines of code should be removed.(ÕÓ‹É˘ˇˇˇˇ
-T	java:S106Ω"9Replace this use of System.out or System.err by a logger.(°⁄©£ˇˇˇˇˇ
-T	java:S106é"9Replace this use of System.out or System.err by a logger.(â˚ù¶˙ˇˇˇˇ
-E
-java:S1125ó")Remove the literal "false" boolean value.(˚úˇÁ˝ˇˇˇˇ
-N	java:S106j"9Replace this use of System.out or System.err by a logger.(Ù§ÑÂ
-2
-java:S3626ÿ"Remove this redundant jump.(˚¡›Ö
-O	java:S106∫"9Replace this use of System.out or System.err by a logger.(ÅÂòπ
-L
-java:S1068 "6Remove this unused "automobileDaoMySQl" private field.(ﬁ∆êé
-8	java:S131¿""Add a default case to this switch.(ÏË≤Î
+d
+java:S2094"BRemove this empty class, write its code or make it an "interface".(°íûÇ˚ˇˇˇˇ8ÂÍöÌÄ/
+X	java:S125"<This block of commented-out lines of code should be removed.(€›ó˛8ÂÍöÌÄ/

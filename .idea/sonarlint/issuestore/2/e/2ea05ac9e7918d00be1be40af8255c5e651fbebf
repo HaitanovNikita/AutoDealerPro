@@ -1,7 +1,8 @@
 
-m	java:S116"QRename this field "ID_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø•¥ö8ú¢²ùÿ.
-o	java:S116"SRename this field "type_pay" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùâõ8ú¢²ùÿ.
-p	java:S116"TRename this field "ID_client" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åûì8ú¢²ùÿ.
-i	java:S116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÌèš8ú¢²ùÿ.
-y	java:S116"XRename this field "date_sale_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½Ïû´ÿÿÿÿÿ8ú¢²ùÿ.
-o	java:S116"URename this field "ID_manager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿X8ú¢²ùÿ.
+o	java:S116"SRename this field "type_pay" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùâõ8ú¢²ùÿ.
+m	java:S116"QRename this field "ID_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø•¥ö8ú¢²ùÿ.
+o	java:S116"URename this field "ID_manager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿X8ú¢²ùÿ.
+i	java:S116
+"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÌèš8ú¢²ùÿ.
+p	java:S116"TRename this field "ID_client" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åûì8ú¢²ùÿ.
+y	java:S116"XRename this field "date_sale_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½Ïû´ÿÿÿÿÿ8ú¢²ùÿ.

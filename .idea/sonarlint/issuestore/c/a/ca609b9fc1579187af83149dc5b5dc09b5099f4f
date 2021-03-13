@@ -1,6 +1,0 @@
-
->
-java:S1125B"(Remove the literal "true" boolean value.(¿„”Ä
-J
-java:S1611D"/Remove the parentheses around the "c" parameter(Í¸Í›þÿÿÿÿ
-S	java:S106D"9Replace this use of System.out or System.err by a logger.(Í¸Í›þÿÿÿÿ

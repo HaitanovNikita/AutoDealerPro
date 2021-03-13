@@ -1,12 +1,0 @@
-
-J
-java:S3740"/Provide the parametrized type for this generic.(Þïù˜øÿÿÿÿ
-g
-java:S1104"QMake clazz a static final constant or non-public and provide accessors if needed.(é—‹þ
-J
-java:S1611D"/Remove the parentheses around the "c" parameter(¬©Û¼þÿÿÿÿ
-C
-java:S1125B"(Remove the literal "true" boolean value.(ßí¿ªùÿÿÿÿ
-S	java:S106D"9Replace this use of System.out or System.err by a logger.(¬©Û¼þÿÿÿÿ
-E
-java:S3740"/Provide the parametrized type for this generic.(é—‹þ

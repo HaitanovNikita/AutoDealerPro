@@ -1,8 +1,8 @@
 
-x	java:S116"WRename this field "client_fname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÞÒ²ýÿÿÿÿ8 æ§ùÿ.
-s	java:S116"WRename this field "client_email" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(žÜ“°8 æ§ùÿ.
-y	java:S116"XRename this field "client_gender" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ°íˆþÿÿÿÿ8 æ§ùÿ.
-s	java:S116"WRename this field "client_lname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôš´“8 æ§ùÿ.
-w	java:S116"[Rename this field "client_phone_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­¶Þï8 æ§ùÿ.
-v	java:S116"URename this field "client_age" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íæÎ…ýÿÿÿÿ8 æ§ùÿ.
-i	java:S116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÌèš8 æ§ùÿ.
+y	java:S116"XRename this field "client_gender" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ°íˆþÿÿÿÿ8 æ§ùÿ.
+s	java:S116"WRename this field "client_lname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôš´“8 æ§ùÿ.
+x	java:S116"WRename this field "client_fname" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÞÒ²ýÿÿÿÿ8 æ§ùÿ.
+v	java:S116"URename this field "client_age" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íæÎ…ýÿÿÿÿ8 æ§ùÿ.
+s	java:S116"WRename this field "client_email" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(žÜ“°8 æ§ùÿ.
+i	java:S116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÌèš8 æ§ùÿ.
+w	java:S116"[Rename this field "client_phone_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­¶Þï8 æ§ùÿ.

@@ -1,8 +1,4 @@
 
-k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š— £øÿÿÿÿ
-f	java:S117%"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á›ê
-b	java:S116
-"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÌèš
-n	java:S116"TRename this field "type_body" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù±ş¡üÿÿÿÿ
-c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆàÃ
-c	java:S100%"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á›ê
+n	java:S116"TRename this field "type_body" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù±ş¡üÿÿÿÿ
+]	java:S125"<This block of commented-out lines of code should be removed.(Ñ‚ çşÿÿÿÿ8à¨ÌÅ€/
+g	java:S116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûœ¢Äıÿÿÿÿ

@@ -1,4 +1,3 @@
 
-_
-java:S2094"BRemove this empty class, write its code or make it an "interface".(•ÀœÎ8ì±Ø¤€/
-]	java:S125"<This block of commented-out lines of code should be removed.(áÑ¿øÿÿÿÿ8ì±Ø¤€/
+W
+java:S1118":Add a private constructor to hide the implicit public one.(•ÀœÎ8ý©§Â€/
