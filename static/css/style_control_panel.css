@@ -1,0 +1,22 @@
+.car-container{
+    display: inline-block;
+    width: 520px;
+    height:625px;
+    border:1px solid #343a40;
+    background: white;
+    margin: 10px 50px 10px 70px;
+  }
+
+
+  
+ #changeAuto:active{
+    background-color: #4169e1;
+ }
+
+ #viewAuto:active{
+    background-color: #4169e1;
+ }
+
+ #performOperBtn:active{
+    background: #4169e1;
+ } 

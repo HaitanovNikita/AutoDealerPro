@@ -1,0 +1,13 @@
+
+U
+java:S2479":Remove the non-escaped \u0009 character from this literal.(Ãßº´þÿÿÿÿ
+?
+java:S1125¦"(Remove the literal "true" boolean value.(õÉûó
+U
+java:S2479 ":Remove the non-escaped \u0009 character from this literal.(§ÿ—êüÿÿÿÿ
+‹
+java:S1319c"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(—ÇÈ¶úÿÿÿÿ
+u
+java:S2293¨"YReplace the type specification in this constructor call with the diamond operator ("<>").(à­ŸÒþÿÿÿÿ
+U
+java:S2479":Remove the non-escaped \u0009 character from this literal.(Ãßº´þÿÿÿÿ

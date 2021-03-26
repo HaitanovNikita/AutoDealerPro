@@ -1,0 +1,69 @@
+
+f	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‹Ê¦
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÅ»¿ÿÿÿÿÿ
+c	java:S100A"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø¯‡æ
+i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óƒ¾˜úÿÿÿÿ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óƒ¾˜úÿÿÿÿ
+u	java:S116"TRename this field "color_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òï–ûıÿÿÿÿ8æ ÿí‚/
+€
+java:S1845”"dRename method "setID" to prevent any misunderstanding/clash with method "setId" defined on line 116.(ığÉùÿÿÿÿ
+[	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(íÅ»¿ÿÿÿÿÿ
+c	java:S100Œ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾«ñ
+c	java:S100P"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ò¯ìÀ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œóÉ—ûÿÿÿÿ
+f	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»÷¨G
+p	java:S116"TRename this field "power_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ï°’8æ ÿí‚/
+w
+java:S1104"\Make engine_carString a static final constant or non-public and provide accessors if needed.(…êŒÃÿÿÿÿÿ
+h	java:S100x"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÂõ’şÿÿÿÿ
+u
+java:S1104"_Make type_car_bodyString a static final constant or non-public and provide accessors if needed.(ÂÅõ«
+c	java:S100U"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áóö
+h	java:S100F"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÀÌßùÿÿÿÿ
+f	java:S117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾«ñ
+V	java:S107("AConstructor has 9 parameters, which is greater than 7 authorized.(‘‹Ê¦
+n	java:S116
+"TRename this field "car_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çíîÂıÿÿÿÿ
+q
+java:S1104"[Make model_carString a static final constant or non-public and provide accessors if needed.(‹®è²
+f	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‹Ê¦
+f	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‹Ê¦
+u	java:S116"[Rename this field "engine_carString" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…êŒÃÿÿÿÿÿ
+f	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×¨ŞÎ
+s	java:S116"^Rename this field "type_car_bodyString" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÅõ«
+d	java:S100ˆ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¹‡™
+k	java:S117x"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÂõ’şÿÿÿÿ
+i	java:S100„"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•î¼ùúÿÿÿÿ
+c	java:S100˜"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»÷¨G
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œóÉ—ûÿÿÿÿ
+f	java:S117("QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘‹Ê¦
+R	java:S125®"<This block of commented-out lines of code should be removed.(¿ìÕ•
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œóÉ—ûÿÿÿÿ
+q
+java:S1104"[Make color_carString a static final constant or non-public and provide accessors if needed.(˜±›
+h	java:S100Z"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ôÖšûÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÅ»¿ÿÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÅ»¿ÿÿÿÿÿ
+l	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­’Éúşÿÿÿÿ
+V	java:S125c"<This block of commented-out lines of code should be removed.(äˆæêûÿÿÿÿ
+c	java:S100|"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óˆå”
+i	java:S100€"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­’Éúşÿÿÿÿ
+g	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¹‡™
+o	java:S116"ZRename this field "model_carString" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹®è²
+f	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×¨ŞÎ
+h	java:S100_"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬ó˜åûÿÿÿÿ
+f	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×¨ŞÎ
+u	java:S116"TRename this field "model_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ûøı·øÿÿÿÿ8æ ÿí‚/
+q	java:S116"URename this field "engine_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó×…8æ ÿí‚/
+f	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×¨ŞÎ
+h	java:S100<"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞïĞçûÿÿÿÿ
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íÅ»¿ÿÿÿÿÿ
+g	java:S116	"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¾­ûÿÿÿÿ
+h	java:S116"SRename this field "car_make" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ìá
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œóÉ—ûÿÿÿÿ
+f	java:S117|"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óˆå”
+s	java:S116"YRename this field "year_issue_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò´ª˜úÿÿÿÿ
+c	java:S100K"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğùÃÅ
+t	java:S116"XRename this field "type_car_body" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ‚È¢8æ ÿí‚/
+o	java:S116"ZRename this field "color_carString" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜±›
+l	java:S117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•î¼ùúÿÿÿÿ
