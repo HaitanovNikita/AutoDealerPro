@@ -25,25 +25,25 @@ public class Automobile implements Serializable {
     private String car_make;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "model_car_id")
+    @JoinColumn(name = "model_car")
     private ModelCar model_car;
 
     private String year_issue_car;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "power_car_id")
+    @JoinColumn(name = "power_car")
     private PowerCar power_car;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "engine_car_id")
+    @JoinColumn(name = "engine_car")
     private EngineCar engine_car;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "color_car_id")
+    @JoinColumn(name = "color_car")
     private ColorCar color_car;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "type_car_body_id")
+    @JoinColumn(name = "type_car_body")
     private TypeCarBody type_car_body;
 
 }

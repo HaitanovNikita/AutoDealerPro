@@ -1,9 +1,9 @@
 package autodealer.com.logic.config;
 
-import org.springframework.context.annotation.Configuration;
-
-@Configuration
+//@Configuration
 public class Config {
 
 
+    public final String a="";
+    public String aa ="";
 }

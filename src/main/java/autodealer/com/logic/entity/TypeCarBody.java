@@ -25,8 +25,6 @@ public class TypeCarBody implements Serializable {
     @Column(name = "type_body")
     private String type_body;
 
-    //    @OneToOne(mappedBy = "type_car_body")
-//    private Automobile automobile;
     @OneToMany(mappedBy = "type_car_body",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)

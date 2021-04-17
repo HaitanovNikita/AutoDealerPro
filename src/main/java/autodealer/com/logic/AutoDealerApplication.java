@@ -2,12 +2,14 @@ package autodealer.com.logic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication(scanBasePackages = "autodealer.com.logic")
 public class AutoDealerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AutoDealerApplication.class, args);
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(AutoDealerApplication.class, args);
+
     }
 
 //	public static void main(String[] args) {
