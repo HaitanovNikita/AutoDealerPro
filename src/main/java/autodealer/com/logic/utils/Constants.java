@@ -1,6 +1,6 @@
 package autodealer.com.logic.utils;
 
-public class Utils {
+public class Constants {
 
     protected static final String queryGetAllCars = "Select " +
             "a.id, a.car_price, a.car_make, a.year_issue_car, " +
@@ -29,6 +29,10 @@ public class Utils {
     public static final String auxiliaryQuery1 ="Select cs.ID_car from CarSale as cs group by ID_car having count(cs.ID_car) = (select count(cs.ID_car) from CarSale as cs group by cs.ID_car order by count(cs.ID_car) DESC LIMIT 1) LIMIT 1";
 
     public static final String auxiliaryQuery2="select count(cs.ID_car) from CarSale as cs group by cs.ID_car order by count(cs.ID_car) DESC LIMIT 1";
+
+    public static final String nameQueryForFindingByAnswerIdAndSection = "find By Answer Id And Section";
+    public static final String nameQueryForFindingByText= "find By Text";
+    public static final String nameQueryForFindingBySection= "find By Section";
 
     public static void colorPrintln(String dataForPrint, int color30To37){
         System.out.println((char)27 + "["+color30To37+"m" + dataForPrint);

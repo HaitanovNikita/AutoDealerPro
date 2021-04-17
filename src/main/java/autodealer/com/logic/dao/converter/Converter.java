@@ -95,4 +95,24 @@ public class Converter {
                 .type_car_body(automobile.getType_car_body().getType_body())
                 .build();
     }
+
+    public static IntegrationData convertDtoToEntity(IntegrationDataDTO integrationDataDTO) {
+        return IntegrationData
+                .builder()
+                .answerId(integrationDataDTO.getAnswerId())
+                .section(integrationDataDTO.getSection())
+                .text(integrationDataDTO.getText())
+                .id(integrationDataDTO.getId())
+                .build();
+    }
+
+    public static IntegrationDataDTO convertEntityToDto(IntegrationData integrationData) {
+        return IntegrationDataDTO
+                .builder()
+                .answerId(integrationData.getAnswerId())
+                .section(integrationData.getSection())
+                .text(integrationData.getText())
+                .id(integrationData.getId())
+                .build();
+    }
 }
