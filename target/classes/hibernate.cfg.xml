@@ -39,7 +39,8 @@
       <mapping class="autodealer.com.logic.entity.Manager"/>
       <mapping class="autodealer.com.logic.entity.Client"/>
       <mapping class="autodealer.com.logic.entity.CarSale"/>
-      
+      <mapping class="autodealer.com.logic.entity.IntegrationData"/>
+
  
   </session-factory>
  

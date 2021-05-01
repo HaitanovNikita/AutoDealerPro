@@ -1,18 +1,10 @@
 
-x	java:S116"YRename this field "year_issue_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò´ª˜úÿÿÿÿ8ùç©Â€/
-s	java:S116"TRename this field "power_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ù üøÿÿÿÿ8ùç©Â€/
-n	java:S116"TRename this field "color_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ü× 8ùç©Â€/
-s	java:S116"TRename this field "car_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çíîÂıÿÿÿÿ8ùç©Â€/
-m	java:S116"SRename this field "car_make" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ìá8ùç©Â€/
-w	java:S116"XRename this field "type_car_body" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸·’Òşÿÿÿÿ8ùç©Â€/
-t	java:S116"URename this field "engine_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö÷ÄÁşÿÿÿÿ8ùç©Â€/
-l	java:S116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦³öÔıÿÿÿÿ8ùç©Â€/
-s	java:S116"TRename this field "model_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ñà‰ıÿÿÿÿ8ùç©Â€/
-M
-java:S1068"-Remove this unused "model_car" private field.(›Ñà‰ıÿÿÿÿ8°¦ˆ/
-N
-java:S1068".Remove this unused "engine_car" private field.(Ö÷ÄÁşÿÿÿÿ8°¦ˆ/
-H
-java:S1068"-Remove this unused "color_car" private field.(‹Ü× 8°¦ˆ/
-Q
-java:S1068"1Remove this unused "type_car_body" private field.(¸·’Òşÿÿÿÿ8°¦ˆ/
+o	java:S116"SRename this field "car_make" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ìá8ùç©Â€/
+u	java:S116"TRename this field "car_price" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çíîÂıÿÿÿÿ8ùç©Â€/
+v	java:S116"URename this field "engine_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö÷ÄÁşÿÿÿÿ8ùç©Â€/
+u	java:S116"TRename this field "power_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚ù üøÿÿÿÿ8ùç©Â€/
+y	java:S116"XRename this field "type_car_body" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸·’Òşÿÿÿÿ8ùç©Â€/
+n	java:S116"MRename this field "ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦³öÔıÿÿÿÿ8ùç©Â€/
+u	java:S116"TRename this field "model_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ñà‰ıÿÿÿÿ8ùç©Â€/
+p	java:S116"TRename this field "color_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ü× 8ùç©Â€/
+z	java:S116"YRename this field "year_issue_car" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò´ª˜úÿÿÿÿ8ùç©Â€/

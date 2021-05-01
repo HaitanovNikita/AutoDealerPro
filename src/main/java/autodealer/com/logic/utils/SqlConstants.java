@@ -1,6 +1,6 @@
 package autodealer.com.logic.utils;
 
-public class Constants {
+public class SqlConstants {
 
     protected static final String queryGetAllCars = "Select " +
             "a.id, a.car_price, a.car_make, a.year_issue_car, " +

@@ -1,6 +1,8 @@
 package autodealer.com.logic.dao.impl;
 
 import autodealer.com.logic.dao.IntegrationDataDao;
+import autodealer.com.logic.dao.converter.Converter;
+import autodealer.com.logic.dto.IntegrationDataDTO;
 import autodealer.com.logic.entity.IntegrationData;
 import autodealer.com.logic.repository.IntegrationDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +14,7 @@ import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-import static autodealer.com.logic.utils.Constants.*;
+import static autodealer.com.logic.utils.SqlConstants.*;
 
 /**
  * @author nhaitanov
@@ -30,13 +32,15 @@ public class IntegrationDataDaoImpl implements IntegrationDataDao {
     }
 
     @Override
-    public List<IntegrationData> readAll() {
-        return (ArrayList) integrationDataRepository.findAll();
+    public List<IntegrationDataDTO> readAll() {
+        List<IntegrationDataDTO> integrationDataDTOList = new ArrayList<>();
+        integrationDataRepository.findAll().forEach(integrationData -> integrationDataDTOList.add(Converter.convertEntityToDto(integrationData)));
+        return integrationDataDTOList;
     }
 
     @Override
-    public IntegrationData findById(Long id) {
-        return integrationDataRepository.findById(id).get();
+    public IntegrationDataDTO findById(Long id) {
+        return Converter.convertEntityToDto(integrationDataRepository.findById(id).get());
     }
 
     @Override
@@ -51,27 +55,29 @@ public class IntegrationDataDaoImpl implements IntegrationDataDao {
     }
 
     @Override
-    public List<IntegrationData> findByAnswerIdAndSection(long aid, long section) {
+    public List<IntegrationDataDTO> findByAnswerIdAndSection(long aid, long section) {
         Query namedQuery = entityManager.createNamedQuery(nameQueryForFindingByAnswerIdAndSection);
         namedQuery.setParameter("aId", aid);
         namedQuery.setParameter("section", section);
-        ArrayList<IntegrationData> resultList = (ArrayList<IntegrationData>) namedQuery.getResultList();
+        ArrayList<IntegrationDataDTO> resultList = (ArrayList<IntegrationDataDTO>) namedQuery.getResultList();
         return resultList;
     }
 
     @Override
-    public List<IntegrationData> findByText(String text) {
+    public List<IntegrationDataDTO> findByText(String text) {
         Query namedQuery = entityManager.createNamedQuery(nameQueryForFindingByText);
         namedQuery.setParameter("text", text);
-        ArrayList<IntegrationData> resultList = (ArrayList<IntegrationData>) namedQuery.getResultList();
+        ArrayList<IntegrationDataDTO> resultList = (ArrayList<IntegrationDataDTO>) namedQuery.getResultList();
         return resultList;
     }
 
     @Override
-    public List<IntegrationData> findBySection(long section) {
-        Query namedQuery = entityManager.createNamedQuery(nameQueryForFindingBySection);
-        namedQuery.setParameter("section", section);
-        ArrayList<IntegrationData> resultList = (ArrayList<IntegrationData>) namedQuery.getResultList();
+    public List<IntegrationDataDTO> findBySection(long section) {
+//        Query namedQuery = entityManager.createNamedQuery(nameQueryForFindingBySection);
+//        namedQuery.setParameter("section", section);
+//        ArrayList<IntegrationDataDTO> resultList = (ArrayList<IntegrationDataDTO>) namedQuery.getResultList();
+        List<IntegrationDataDTO> resultList = new ArrayList<>();
+        integrationDataRepository.findAllBySection(section).forEach(integrationData -> resultList.add(Converter.convertEntityToDto(integrationData)));
         return resultList;
     }
 }

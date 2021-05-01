@@ -1,5 +1,6 @@
 package autodealer.com.logic.dao;
 
+import autodealer.com.logic.dto.IntegrationDataDTO;
 import autodealer.com.logic.entity.IntegrationData;
 import org.springframework.stereotype.Repository;
 
@@ -11,16 +12,16 @@ import java.util.List;
 @Repository
 public interface IntegrationDataDao {
 
-    List<IntegrationData> readAll();
+    List<IntegrationDataDTO> readAll();
 
-    IntegrationData findById(Long id);
+    IntegrationDataDTO findById(Long id);
 
     IntegrationData save(IntegrationData integrationData);
     IntegrationData delete(IntegrationData integrationData);
 
-    List<IntegrationData> findByAnswerIdAndSection(long aid,long section);
-    List<IntegrationData> findByText(String text);
-    List<IntegrationData> findBySection(long section);
+    List<IntegrationDataDTO> findByAnswerIdAndSection(long aid,long section);
+    List<IntegrationDataDTO> findByText(String text);
+    List<IntegrationDataDTO> findBySection(long section);
 
 
 }

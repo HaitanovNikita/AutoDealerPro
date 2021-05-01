@@ -20,8 +20,12 @@ import java.util.List;
 @RequestMapping("/data")
 public class IntegrationDataController {
 
-    @Autowired
     private IntegrationDataService integrationDataService;
+
+    @Autowired
+    public IntegrationDataController(IntegrationDataService integrationDataService) {
+        this.integrationDataService = integrationDataService;
+    }
 
     @ApiOperation(value = "Read all integration data")
     @GetMapping(value = "/read", produces = MediaType.APPLICATION_JSON_VALUE)

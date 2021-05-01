@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author nhaitanov
@@ -27,12 +26,12 @@ public class IntegrationDataServiceImpl implements IntegrationDataService {
 
     @Override
     public List<IntegrationDataDTO> readAll() {
-        return integrationDataDao.readAll().stream().map(integrationData -> Converter.convertEntityToDto(integrationData)).collect(Collectors.toList());
+        return integrationDataDao.readAll();
     }
 
     @Override
     public IntegrationDataDTO findById(Long id) {
-        return Converter.convertEntityToDto(integrationDataDao.findById(id));
+        return integrationDataDao.findById(id);
     }
 
     @Override
@@ -47,19 +46,19 @@ public class IntegrationDataServiceImpl implements IntegrationDataService {
 
     @Override
     public List<IntegrationDataDTO> findByAnswerIdAndSection(long aid, long section) {
-        List<IntegrationDataDTO> integrationDataDTOS = integrationDataDao.findByAnswerIdAndSection(aid, section).stream().map(integrationData -> Converter.convertEntityToDto(integrationData)).collect(Collectors.toList());
+        List<IntegrationDataDTO> integrationDataDTOS = integrationDataDao.findByAnswerIdAndSection(aid, section);
         return integrationDataDTOS;
     }
 
     @Override
     public List<IntegrationDataDTO> findByText(String text) {
-        List<IntegrationDataDTO> integrationDataDTOS = integrationDataDao.findByText(text).stream().map(integrationData -> Converter.convertEntityToDto(integrationData)).collect(Collectors.toList());
+        List<IntegrationDataDTO> integrationDataDTOS = integrationDataDao.findByText(text);
         return integrationDataDTOS;
     }
 
     @Override
     public List<IntegrationDataDTO> findBySection(long section) {
-        List<IntegrationDataDTO> integrationDataDTOS = integrationDataDao.findBySection(section).stream().map(integrationData -> Converter.convertEntityToDto(integrationData)).collect(Collectors.toList());
+        List<IntegrationDataDTO> integrationDataDTOS = integrationDataDao.findBySection(section);
         return integrationDataDTOS;
     }
 }

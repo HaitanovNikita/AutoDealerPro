@@ -1,3 +1,5 @@
+server:
+  port: 1030
 spring:
   application:
     name: @project.artifactId@

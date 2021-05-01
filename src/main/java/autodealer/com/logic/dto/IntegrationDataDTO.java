@@ -7,13 +7,12 @@ import lombok.*;
  */
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
 @Builder
 @Data
 public class IntegrationDataDTO {
     private long id;
     private long answerId;
-    private long section;
     private String text;
+    private long section;
 
 }
