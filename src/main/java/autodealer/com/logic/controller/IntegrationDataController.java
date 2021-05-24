@@ -5,6 +5,7 @@ import autodealer.com.logic.service.IntegrationDataService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -16,6 +17,7 @@ import java.util.List;
 /**
  * @author nhaitanov
  */
+@Slf4j
 @RestController
 @RequestMapping("/data")
 public class IntegrationDataController {
@@ -69,8 +71,9 @@ public class IntegrationDataController {
     }
 
     @ApiOperation(value = "Find data by section")
-    @GetMapping(value = "/find/section/{section}", produces = MediaType.APPLICATION_JSON_VALUE)
+        @GetMapping(value = "/find/section/{section}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<IntegrationDataDTO>> findBySection(@PathVariable long section) {
+        log.debug("findBySection: "+section);
         return new ResponseEntity<>(integrationDataService.findBySection(section), HttpStatus.OK);
     }
 }

@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("EngineCar")
+@RequestMapping("/engineCar")
 public class EngineCarController {
 
     @Autowired
