@@ -10,19 +10,19 @@ import javax.validation.constraints.NotNull;
 @RequiredArgsConstructor
 public class ManagerDTO {
     @NotNull
-    private int ID;
+    private int id;
     @NotNull
-    private String manager_fname;
+    private String fname;
     @NotNull
-    private String manager_lname;
+    private String lname;
     @NotNull
-    private String manager_post;
-    private String manager_phone_num;
+    private String post;
+    private String phone;
     @NotNull
-    private int manager_age;
-    private String manager_email;
+    private int age;
+    private String email;
     @NotNull
-    private String manager_gender;
-    private String manager_login;
-    private String manager_pass;
+    private String gender;
+    private String login;
+    private String password;
 }
