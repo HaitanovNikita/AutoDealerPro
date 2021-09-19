@@ -1,7 +1,6 @@
 class ComponentCar{
 
     constructor(id,component,container){
-        // document.getElementById('auto-cards-container').innerHTML+=this.getCard();
         this.id = id;
         this.component = component;
         document.getElementById(container).innerHTML+=this.getComponent();  

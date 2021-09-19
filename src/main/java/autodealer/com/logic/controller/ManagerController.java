@@ -51,7 +51,7 @@ public class ManagerController {
         return new ResponseEntity<>(managerService.findById(id), HttpStatus.OK);
     }
 
-    @ApiOperation(value = "Delete manager")
+    @ApiOperation(value = "Find manager")
     @PostMapping("/find/login/{login}/password/{password}")
     public ResponseEntity<ManagerDTO> findByLoginAndPassword(@PathVariable String login, @PathVariable String password) {
         return new ResponseEntity<>(managerService.findByLoginAndPassword(login, password), HttpStatus.OK);

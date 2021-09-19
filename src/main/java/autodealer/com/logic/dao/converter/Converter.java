@@ -49,12 +49,12 @@ public class Converter {
         return Client
                 .builder()
                 .ID(clientDTO.getID())
-                .client_age(clientDTO.getClient_age())
-                .client_email(clientDTO.getClient_email())
-                .client_fname(clientDTO.getClient_fname())
-                .client_gender(clientDTO.getClient_gender())
-                .client_lname(clientDTO.getClient_lname())
-                .client_phone_num(clientDTO.getClient_phone_num())
+                .age(clientDTO.getClient_age())
+                .email(clientDTO.getClient_email())
+                .fname(clientDTO.getClient_fname())
+                .gender(clientDTO.getClient_gender())
+                .lname(clientDTO.getClient_lname())
+                .phone(clientDTO.getClient_phone_num())
                 .build();
     }
 
@@ -62,12 +62,12 @@ public class Converter {
         return ClientDTO
                 .builder()
                 .ID(client.getID())
-                .client_phone_num(client.getClient_phone_num())
-                .client_lname(client.getClient_lname())
-                .client_gender(client.getClient_gender())
-                .client_fname(client.getClient_fname())
-                .client_email(client.getClient_email())
-                .client_age(client.getClient_age())
+                .client_phone_num(client.getPhone())
+                .client_lname(client.getLname())
+                .client_gender(client.getGender())
+                .client_fname(client.getFname())
+                .client_email(client.getEmail())
+                .client_age(client.getAge())
                 .build();
     }
 

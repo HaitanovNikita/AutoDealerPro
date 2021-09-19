@@ -19,16 +19,16 @@ public class Client {
     @JoinColumn(name = "ID")
     private int ID;
     @Column(name = "client_fname")
-    private String client_fname;
+    private String fname;
     @Column(name = "client_lname")
-    private String client_lname;
+    private String lname;
     @Column(name = "client_phone_num")
-    private String client_phone_num;
+    private String phone;
     @Column(name = "client_age")
-    private int client_age;
+    private int age;
     @Column(name = "client_email")
-    private String client_email;
+    private String email;
     @Column(name = "client_gender")
-    private String client_gender;
+    private String gender;
 
 }

@@ -62,7 +62,7 @@ public class ClientDaoImpl implements ClientDao {
 
     @Override
     public Client findByClient_phone_num(String phoneNum) {
-        return entityManager.createQuery("Select c FROM Client c where client_phone_num = '" + phoneNum + "'",Client.class).getSingleResult();
+        return entityManager.createQuery("Select c FROM Client c where phone = '" + phoneNum + "'",Client.class).getSingleResult();
     }
 
 }
