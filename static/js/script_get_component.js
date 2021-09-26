@@ -3,8 +3,7 @@ class ComponentCar{
     constructor(id,component,container){
         this.id = id;
         this.component = component;
-        document.getElementById(container).innerHTML+=this.getComponent();  
-        
+        document.getElementById(container).innerHTML+=this.getComponent();
     }
 
     getComponent(){

@@ -42,6 +42,16 @@ public class AutomobileServiceImpl implements AutomobileService {
     }
 
     @Override
+    public AutomobileDTO findByAuto(Integer modelCar, Integer powerCar, Integer engineCar, Integer colorCar, Integer typeCarBody) {
+        return Converter.convertEntityToDto(automobileDaoMySQl.findByAuto(modelCar, powerCar, engineCar, colorCar, typeCarBody));
+    }
+
+    @Override
+    public List<AutomobileDTO> findByModelCar(Long id) {
+        return automobileDaoMySQl.findByModelAuto(id).stream().map(automobile -> Converter.convertEntityToDto(automobile)).collect(Collectors.toList());
+    }
+
+    @Override
     public AutomobileDTO getMostPopularAuto() {
         return Converter.convertEntityToDto(automobileDaoMySQl.getMostPopularAuto());
     }
@@ -59,6 +69,11 @@ public class AutomobileServiceImpl implements AutomobileService {
     @Override
     public AutomobileDTO findById(Long id) {
         return Converter.convertEntityToDto(automobileDaoMySQl.findById(id));
+    }
+
+    @Override
+    public AutomobileDTO updateAuto(AutomobileDTO automobileDTO) {
+        return Converter.convertEntityToDto(automobileDaoMySQl.update(automobileDTO.getCar_price(), automobileDTO.getID()));
     }
 
 }

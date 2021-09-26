@@ -11,4 +11,5 @@ public interface AutomobileRepository extends CrudRepository<Automobile, Long>, 
     Iterable<Automobile> findAll();
 
     Optional<Automobile> findById(Long id);
+
 }

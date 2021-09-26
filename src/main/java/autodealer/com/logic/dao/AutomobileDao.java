@@ -9,20 +9,23 @@ import java.util.List;
  * @author Haitanov Nikita
  */
 @Repository
-public interface AutomobileDao  {
+public interface AutomobileDao {
 
     List<Automobile> readAll();
 
     Automobile findById(Long id);
 
+    List<Automobile> findByModelAuto(Long id);
+
     Automobile save(Automobile automobile);
 
     Automobile getMostPopularAuto();
 
-    String getSalesProfitForTheGap(String fromDate,String forDate);
+    String getSalesProfitForTheGap(String fromDate, String forDate);
 
     void deleteByID(long id);
 
-//    Automobile findByYear_issue_car(String yearIssueCar);
+    Automobile findByAuto(Integer modelCar, Integer powerCar, Integer engineCar, Integer colorCar, Integer typeCarBody);
 
+    Automobile update(long newPrice, long id);
 }

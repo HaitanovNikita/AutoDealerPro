@@ -111,8 +111,8 @@ autoBtn.onclick = function () {
     document.getElementById('viewAuto').style.backgroundColor = colorActive;
     autoBtn.style.backgroundColor = colorActive;
     document.getElementById('cars-container').innerHTML = "";
-    new GenerateAuto('getAllAuto');
-    // добавить вычитывание всех авто из базы данных и отрисовка по нажатию function queryToServer(query)  -- query - getAllAuto  
+    new GenerateAuto('readAll');
+    // TODO добавить вычитывание всех авто из базы данных и отрисовка по нажатию function queryToServer(query)  -- query - getAllAuto
 }
 
 staffBtn.onclick = function () {
@@ -123,7 +123,7 @@ staffBtn.onclick = function () {
     document.getElementById('viewAuto').style.backgroundColor = colorActive;
     staffBtn.style.backgroundColor = colorActive;
     queryToServer('/manager/read');
-    // добавить вычитывание всех менеджеров из базы данных и запись в таблицу по нажатию function queryToServer(query)  -- query - getAllManager
+    // TODO добавить вычитывание всех менеджеров из базы данных и запись в таблицу по нажатию function queryToServer(query)  -- query - getAllManager
 }
 
 clientBtn.onclick = function () {
@@ -301,27 +301,30 @@ btnPerformOperation.onclick = function () {
     let unique_id = '' + document.getElementById('inputState id_auto').value;
     unique_id = unique_id.substr(0, unique_id.length - 5);
     unique_id = unique_id.substr(3, unique_id.length);
-    let model = document.getElementById('inputState model_auto').value;
-    let engine = document.getElementById('inputState engine_car').value;
-    let power = document.getElementById('inputState power_car').value;
-    let body = document.getElementById('inputState car_body').value;
-    let color = document.getElementById('inputState color_car').value;
-    let car_make = 'Audi';
-    let price = document.getElementById('inputState price_auto').value;
-    let year_issue_car = document.getElementById('inputState year_issue_car').value;
+    console.log("unique_id: " + unique_id);
+    let model_value = document.getElementById('inputState model_auto').value;
+    let engine_value = document.getElementById('inputState engine_car').value;
+    let power_value = document.getElementById('inputState power_car').value;
+    let body_value = document.getElementById('inputState car_body').value;
+    let color_value = document.getElementById('inputState color_car').value;
+    let car_make_value = 'Audi';
+    let price_value = document.getElementById('inputState price_auto').value;
+    let year_issue_car_value = document.getElementById('inputState year_issue_car').value;
     let xhr = new XMLHttpRequest();
-    let query = '/api/get-client/?operation=UpdateAuto&id_auto=' + unique_id
-        + '&price=' + price
-        + '&car_make=' + car_make
-        + '&model_auto=' + model
-        + '&year_issue_car=' + year_issue_car
-        + '&power_car=' + power
-        + '&engine_car=' + engine
-        + '&color_car=' + color
-        + '&car_body=' + body;
-    xhr.open('POST', query, false);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); // Отправляем кодировку                
-    xhr.send(query);
+    let query = '/auto/update';
+    let json = {
+        id: unique_id,
+        model_car: model_value,
+        engine_car: engine_value,
+        power_car: power_value,
+        type_car_body: body_value,
+        car_color: color_value,
+        car_price: price_value
+    };
+    json = JSON.stringify(json);
+    xhr.open('PUT', query, false);
+    xhr.setRequestHeader('Content-Type', 'application/json'); // Отправляем кодировку
+    xhr.send(json);
     if (xhr.status != 200) {
         alert(xhr.status + ': ' + xhr.statusText + ' no answer');
     } else {
@@ -341,31 +344,35 @@ btnView.onclick = function () {
     btnView.style.backgroundColor = colorActive;
 };
 
-function getAllComponentsCar(nameComponent, containerElement) {
+function getAllComponentsCar(endpoint, containerElement) {
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', '/api/get-client/?operation=' + nameComponent, false);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); // Отправляем кодировку                
-    xhr.send('/api/get-client/?operation=' + nameComponent);
-
-    if (xhr.status != 200) {
-        alert(xhr.status + ': ' + xhr.statusText + ' no answer');
-    } else {
-        console.log(xhr.responseText);
-        let arrResponseText = xhr.responseText.split(" ");
-        let i = 0;
-        let construction = '';
-        while (i < arrResponseText.length - 1) {
-            new ComponentCar(arrResponseText[i], arrResponseText[i + 1], containerElement);
-            i += 2;
+    xhr.open('GET', endpoint, true);
+    xhr.setRequestHeader('Content-Type', 'application/json'); // Отправляем кодировку
+    xhr.send(endpoint);
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState == 4) {
+            if (xhr.status != 200) {
+                alert(xhr.status + ': ' + xhr.statusText + ' no answer');
+            } else {
+                console.log(xhr.responseText);
+                let arrResponseText = JSON.parse(xhr.responseText);
+                let i = 0;
+                while (i < arrResponseText.length - 1) {
+                    let obj = Object.values(arrResponseText[i]);
+                    console.log('new ComponentCar(' + obj[1] + ', ' + obj[0] + ', ' + containerElement + ');')
+                    new ComponentCar(obj[1], obj[0], containerElement);
+                    i += 1;
+                }
+            }
         }
     }
 }
 
-getAllComponentsCar('getAllModelCars', 'inputState model_auto');
-getAllComponentsCar('GetAllEngineCar', 'inputState engine_car');
-getAllComponentsCar('GetAllPowerCar', 'inputState power_car');
-getAllComponentsCar('GetAllTypeCarBody', 'inputState car_body');
-getAllComponentsCar('GetAllColorCar', 'inputState color_car');
+getAllComponentsCar('/modelCar/read', 'inputState model_auto');
+getAllComponentsCar('/engineCar/read', 'inputState engine_car');
+getAllComponentsCar('/powerCar/read', 'inputState power_car');
+getAllComponentsCar('/typeCarBody/read', 'inputState car_body');
+getAllComponentsCar('/colorCar/read', 'inputState color_car');
 
 
 

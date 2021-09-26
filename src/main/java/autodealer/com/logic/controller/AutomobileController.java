@@ -66,9 +66,31 @@ public class AutomobileController {
         return new ResponseEntity<>(automobileService.getSalesProfitForTheGap(fromDate, forDate), HttpStatus.OK);
     }
 
+    @ApiOperation(value = "Get auto by filter")
+    @GetMapping(value = "/modelCar/{modelCar}/powerCar/{powerCar}/engineCar/{engineCar}/colorCar/{colorCar}/typeCarBody/{typeCarBody}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<AutomobileDTO> findByFilter(@PathVariable(name = "modelCar") Integer modelCar,
+                                                      @PathVariable(name = "powerCar") Integer powerCar,
+                                                      @PathVariable(name = "engineCar") Integer engineCar,
+                                                      @PathVariable(name = "colorCar") Integer colorCar,
+                                                      @PathVariable(name = "typeCarBody") Integer typeCarBody) {
+        return new ResponseEntity<>(automobileService.findByAuto(modelCar, powerCar, engineCar, colorCar, typeCarBody), HttpStatus.OK);
+    }
+
     @ApiOperation(value = "Find auto by id")
     @GetMapping("/find/id/{id}")
     public ResponseEntity<AutomobileDTO> findById(@PathVariable("id") Long id) {
         return new ResponseEntity<>(automobileService.findById(id), HttpStatus.OK);
+    }
+
+    @ApiOperation(value = "Find auto by model car id")
+    @PutMapping("/update")
+    public ResponseEntity<AutomobileDTO> updateAuto(@RequestBody AutomobileDTO automobileDTO) {
+        return new ResponseEntity<>(automobileService.updateAuto(automobileDTO), HttpStatus.OK);
+    }
+
+    @ApiOperation(value = "Find auto by model car id")
+    @GetMapping("/find/modelCar/{modelCar}")
+    public ResponseEntity<List<AutomobileDTO>> findByModelCarId(@PathVariable("modelCar") Long id) {
+        return new ResponseEntity<>(automobileService.findByModelCar(id), HttpStatus.OK);
     }
 }
