@@ -1,6 +1,6 @@
 var xhr = new XMLHttpRequest();
-let path = '/modelCar/read'
-xhr.open('GET', path, false);
+let path = '/autodealer-apigateway/auto-dealer/modelCar/read'
+xhr.open('GET', path, true);
 xhr.setRequestHeader('Content-Type', 'application/json'); // Отправляем кодировку
 xhr.send(path);
 xhr.onreadystatechange = () => {
@@ -8,13 +8,15 @@ xhr.onreadystatechange = () => {
         if (xhr.status != 200) {
             alert(xhr.status + ': ' + xhr.statusText + ' no answer');
         } else {
-            let arrResponseText = xhr.responseText.split(" ");
+            console.log(xhr.responseText);
+            let arrResponseText = JSON.parse(xhr.responseText);
             let i = 0;
             while (i < arrResponseText.length - 1) {
-                new AutoModelCard(arrResponseText[i], arrResponseText[i + 1]);
-                i += 2;
+                let obj = Object.values(arrResponseText[i]);
+                console.log('script build car new AutoModelCard(' + obj[1] + ', ' + obj[0] + ');')
+                new AutoModelCard(obj[1], obj[0]);
+                i += 1;
             }
-
         }
     }
 }

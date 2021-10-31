@@ -25,8 +25,6 @@ function queryToServer(operation) {
                     let res = xhr.responseText;
                     return res.substring(1);
                 } else if (operation.includes('/auto/mostPopularAuto')) {
-                    // console.log("xhr.responseText: " + xhr.responseText);
-                    // console.log("JSON.parse(): " +);
                     return JSON.parse(xhr.responseText);
                 }
             } else if (xhr.status == 401) {
@@ -112,7 +110,6 @@ autoBtn.onclick = function () {
     autoBtn.style.backgroundColor = colorActive;
     document.getElementById('cars-container').innerHTML = "";
     new GenerateAuto('readAll');
-    // TODO добавить вычитывание всех авто из базы данных и отрисовка по нажатию function queryToServer(query)  -- query - getAllAuto
 }
 
 staffBtn.onclick = function () {
@@ -123,7 +120,6 @@ staffBtn.onclick = function () {
     document.getElementById('viewAuto').style.backgroundColor = colorActive;
     staffBtn.style.backgroundColor = colorActive;
     queryToServer('/manager/read');
-    // TODO добавить вычитывание всех менеджеров из базы данных и запись в таблицу по нажатию function queryToServer(query)  -- query - getAllManager
 }
 
 clientBtn.onclick = function () {
@@ -134,7 +130,6 @@ clientBtn.onclick = function () {
     document.getElementById('viewAuto').style.backgroundColor = colorActive;
     clientBtn.style.backgroundColor = colorActive;
     queryToServer('/client/read');
-    // добавить вычитывание всех клиентов из базы данных и запись в таблицу по нажатию function queryToServer(query)  -- query - getAllClient
 }
 
 
@@ -205,7 +200,7 @@ viewSalesProfitBtn.onclick = function () {
 function getMostPopularAuto() {
     let auto = '';
     var xhr = new XMLHttpRequest();
-    let path = '/auto/mostPopularAuto';
+    let path = '/autodealer-apigateway/auto-dealer/auto/mostPopularAuto';
     xhr.open('GET', path, true);
     xhr.setRequestHeader('Content-Type', 'application/json'); // Отправляем кодировку
     xhr.send(path);
@@ -330,7 +325,7 @@ btnPerformOperation.onclick = function () {
     } else {
         console.log('Answer about update auto: ' + xhr.responseText);
         location.href = location.href;
-        if (xhr.responseTextstr.indexOf('успішно')) {
+            if (xhr.responseTextstr.indexOf('успішно')) {
             location.href = location.href;
         } else {
             alert(xhr.responseText);
@@ -367,12 +362,18 @@ function getAllComponentsCar(endpoint, containerElement) {
         }
     }
 }
-
+/*update auto*/
 getAllComponentsCar('/modelCar/read', 'inputState model_auto');
 getAllComponentsCar('/engineCar/read', 'inputState engine_car');
 getAllComponentsCar('/powerCar/read', 'inputState power_car');
 getAllComponentsCar('/typeCarBody/read', 'inputState car_body');
 getAllComponentsCar('/colorCar/read', 'inputState color_car');
+/*find auto*/
+getAllComponentsCar('/modelCar/read', 'inputSearchModelAuto');
+getAllComponentsCar('/engineCar/read', 'inputSearchEngineCar');
+getAllComponentsCar('/powerCar/read', 'inputSearchPowerCar');
+getAllComponentsCar('/typeCarBody/read', 'inputSearchCarBody');
+getAllComponentsCar('/colorCar/read', 'inputSearchColorCar');
 
 
 

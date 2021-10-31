@@ -397,7 +397,7 @@
         let body = document.getElementById('inputSearchCarBody').value;
         let color = document.getElementById('inputSearchColorCar').value;
         let xhr = new XMLHttpRequest();
-        let path = '/auto/modelCar/' + model + '/powerCar/' + power + '/engineCar/' + engine + '/colorCar/' + color + '/typeCarBody' + body + '';
+        let path = '/autodealer-apigateway/auto-dealer/auto/modelCar/' + model + '/powerCar/' + power + '/engineCar/' + engine + '/colorCar/' + color + '/typeCarBody' + body + '';
         xhr.open('GET', path, false);
         xhr.send();
 

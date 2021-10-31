@@ -1,8 +1,10 @@
 server:
-  port: 1045
+  servlet:
+    context-path: /${spring.application.name}
+  port: 1046
 spring:
   application:
-    name: @project.artifactId@
+    name: auto-dealer
   jpa:
     properties:
       hibernate:

@@ -1,332 +1,529 @@
-
-#loginBody{
-  background-color:rgb(23,33,43);
+#loginBody {
+    background-color: rgb(23, 33, 43);
 }
 
 
 #footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  padding: 10px;
-  background: rgb(23, 33, 43);
-  color: #007bff;
-  width: 100%;
-  opacity: 0.3;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    background: rgb(23, 33, 43);
+    color: #007bff;
+    width: 100%;
+    opacity: 0.3;
+}
+
+/*icon-chat-bot*/
+.round {
+    position: fixed;
+    top: 82%;
+    right: 5%;
+    background: #bee5eb; /*#d39e00;*//*lightpink*/
+    width: 10%;
+    height: 10%;
+    border-radius: 100px;
+}
+
+.image-chat-bot {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    box-shadow: 0 0 0 3px darkslategray, 0 0 13px #333;
+}
+
+
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+body {
+    background-color: black;
+    position: relative;
+}
+
+.chat {
+    height: 580px;
+    max-width: 350px;
+    width: 350px;
+    background-color: #4b4c4d;
+    border-radius: 15px;
+    padding: 10px 15px 10px 15px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999999999;
+}
+
+.chat__main {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+    padding-bottom: 15px;
+    height: 300px;
+    overflow-y: scroll;
+    border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.chat__message {
+    display: inline-block;
+    /*border-radius: 15px;*/
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.chat__menu {
+    width: 100%;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px 0 10px 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.chat__points {
+    height: 150px;
+    background-color: white;
+    overflow-x: scroll;
+    align-items: center;
+    display: flex;
+    padding: 0 0 10px 20px;
+}
+
+.chat__point {
+    margin: 0 3px 0 3px;
+    height: max-content;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    padding: 7px 10px 7px 10px;
+    background-color: #7abaff;
+    cursor: pointer;
+}
+
+.chat__point:last-child {
+    margin-left: 10px;
+}
+
+.chat__inputs {
+    max-width: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.chat__input {
+    width: 98%;
+    padding: 20px 15px 20px 15px;
+    border: none;
+    outline: none;
+}
+
+.chat__triangle {
+    width: 0;
+    height: 0;
+    border-top: 7.5px solid transparent;
+    border-left: 10px solid #7abaff;;
+    border-bottom: 7.5px solid transparent;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.question {
+    background-color: #f6dca2;
+    max-width: 52%;
+    width: 100%;
+    border-top-right-radius: 10px;
+}
+
+.answer {
+    background-color: #7abaff;
+    color: white;
+    align-self: flex-end;
+    border-top-left-radius: 10px;
+
+}
+
+/*chat*/
+#chat-bot {
+    position: fixed;
+    top: 10%;
+    right: 1%;
+    background: #95999c;
+    z-index: 99999999;
+    width: 30%;
+    height: 90%;
+    border-radius: 30px;
+    border: 2px solid #7abaff;
+}
+
+#hide-chat {
+    top: 23%;
+    margin-right: 2%;
+    margin-left: 83%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 40px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #9b9b9b;
+    border: none;
+    border-radius: 15px;
+}
+
+#hide-chat:hover {
+    background-color: #4b4c4d
+}
+
+#hide-chat:active {
+    background-color: #bee5eb;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 /* CONTROL PANEL*/
 
-.left-cont,.right-cont,.centr-cont{
-display: inline-block;
+.left-cont, .right-cont, .centr-cont {
+    display: inline-block;
 
 }
-.left-cont{
-  width: 17%;
-}
-.right-cont{
-  width: 20%;
+
+.left-cont {
+    width: 17%;
 }
 
-.centr-cont{
-  width:60%;
-  margin-top: 30px;
-  margin-bottom: 1%;
-  text-align: center;
-  color: #9b9b9b;
-  /* border: 2px solid blueviolet; */
+.right-cont {
+    width: 20%;
 }
 
-.left-cont{
-  float: left;
-  margin-top: 25px;
-  margin-left: 1%;
-  position: sticky;
-  top:70px;
-  text-align: left;
-  /* border: 2px solid red; */
-  color: #007bff;
-}
-.right-cont{
-  height:500px;
-  position: sticky;
-  margin-top:1%;
-  margin-right:1%;
-  top:65px;
-  float: right; 
-  overflow:auto;
-  text-align: right;
-  /* border: 2px solid yellow; */
+.centr-cont {
+    width: 60%;
+    margin-top: 30px;
+    margin-bottom: 1%;
+    text-align: center;
+    color: #9b9b9b;
+    /* border: 2px solid blueviolet; */
 }
 
-#table{
-  background:#343a40; /* Цвет фона таблицы */
-  color: #115e9f;
+.left-cont {
+    float: left;
+    margin-top: 25px;
+    margin-left: 1%;
+    position: sticky;
+    top: 70px;
+    text-align: left;
+    /* border: 2px solid red; */
+    color: #007bff;
+}
+
+.right-cont {
+    height: 500px;
+    position: sticky;
+    margin-top: 1%;
+    margin-right: 1%;
+    top: 65px;
+    float: right;
+    overflow: auto;
+    text-align: right;
+    /* border: 2px solid yellow; */
+}
+
+#table {
+    background: #343a40; /* Цвет фона таблицы */
+    color: #115e9f;
 }
 
 
-.confBtn{
-  display: inline-block;
-  margin: 1% 1%;
+.confBtn {
+    display: inline-block;
+    margin: 1% 1%;
 }
 
-.menu_categ{
-  display: inline-block;
-  text-align: center; 
-  width: 500px;
-  padding: 8px 5px 15px 5px;
-  margin: 0 18%;
-  border-bottom:3px solid #9b9b9b;
-  border-left:2px solid #9b9b9b;
-  border-right:2px solid #9b9b9b;
+.menu_categ {
+    display: inline-block;
+    text-align: center;
+    width: 500px;
+    padding: 8px 5px 15px 5px;
+    margin: 0 18%;
+    border-bottom: 3px solid #9b9b9b;
+    border-left: 2px solid #9b9b9b;
+    border-right: 2px solid #9b9b9b;
 }
 
 /* AudiConnect/placeLogin */
-#placeLogin{
-  display: block;
-  margin: 10% 10% 10% 33%;
-  width: 450px;
-  text-align: center;
-  padding: 1%;
-  border: 2px solid #9b9b9b;
+#placeLogin {
+    display: block;
+    margin: 10% 10% 10% 33%;
+    width: 450px;
+    text-align: center;
+    padding: 1%;
+    border: 2px solid #9b9b9b;
 }
 
-#placeRegist{
-  display: block;
-  margin: 10% 10% 10% 28%;
-  width: 600px;
-  text-align: center;
-  padding: 1%;
-  border: 2px solid #9b9b9b;
+#placeRegist {
+    display: block;
+    margin: 10% 10% 10% 28%;
+    width: 600px;
+    text-align: center;
+    padding: 1%;
+    border: 2px solid #9b9b9b;
 }
-#regist-cont{
-  display: inline-block;
-  width: 400px;
+
+#regist-cont {
+    display: inline-block;
+    width: 400px;
 }
+
 /* /// */
 
 
 /* Картинка логотип */
-.logo-img{
-    width:70px;
-    height:50px;
-    margin-right:70px;
-    
+.logo-img {
+    width: 70px;
+    height: 50px;
+    margin-right: 70px;
+
 }
 
-#searchCarImg{
-  width: 100%;
-  height: 55%;
+#searchCarImg {
+    width: 100%;
+    height: 55%;
 }
 
-.img-main{
-  width: 100%;
-  height: 85%;
+.img-main {
+    width: 100%;
+    height: 85%;
 }
+
 /* Информация о компании */
-#info_compani{
-  background: #9b9b9b;
-  text-align: center;
+#info_compani {
+    background: #9b9b9b;
+    text-align: center;
 }
 
-#legal_inform{
-  /* position: relative; */
-  margin-top: 100px;;
-  display: block;
-  text-align: center;
-  margin:12% 17% 12% 17%;
+#legal_inform {
+    /* position: relative; */
+    margin-top: 100px;;
+    display: block;
+    text-align: center;
+    margin: 12% 17% 12% 17%;
 }
 
 /* Картинки в карусели  */
-.carusel-img{
-    width:100%;
-    height: 700px;
+.carusel-img {
+    width: 100%;
+    height: 730px;
 }
+
 /*  */
-
-
-header{
-    top:0px;
+header {
+    top: 0px;
+    height: 2%;
     position: sticky;
     z-index: 999999;
 }
 
-.contacts{
-  text-align: center;
-  width:100%;
-  height: 250px;
-  background-color: #000;
+.contacts {
+    text-align: center;
+    width: 100%;
+    height: 250px;
+    background-color: #000;
 }
 
 /* свойства информационной карточки */
-.descriptive-card{
-  position: relative;
-  display: inline-block;
-  margin: 70px 70px 35px 75px;
-  height: 200px;  
+.descriptive-card {
+    position: relative;
+    display: inline-block;
+    margin: 70px 70px 35px 75px;
+    height: 200px;
 }
 
-.descriptive-title, .descriptive-text{
-  letter-spacing: 0.1em;
+.descriptive-title, .descriptive-text {
+    letter-spacing: 0.1em;
 }
 
-.descriptive-text{
-  position: relative;
-  height:35px;
-  color: #555252;
-  border-top: #9b9b9b;
-  border-bottom: #9b9b9b;
-  border-bottom: 0;
-  
+.descriptive-text {
+    position: relative;
+    height: 35px;
+    color: #555252;
+    border-top: #9b9b9b;
+    border-bottom: #9b9b9b;
+    border-bottom: 0;
+
 }
 
 
-#containerSearchAuto{
-  margin: 1% 10% 1% 10%;
-  
+#containerSearchAuto {
+    margin: 1% 10% 1% 10%;
+
 }
 
 /*  */
 
-          /* Свойства карточки машин */
-          .cars-container{
-            text-align: center;
-            width: 100%;
-          }
-
-          .card-img-top{
-            position: relative;
-            width: 100%;
-            height: 300px;
-          }
-
-          .card-text{
-            position: relative;
-            text-align:left;
-            display: block;
-            border:1px solid #4b4c4d;
-            height:35px;
-            color: #555252;
-            padding: 7px 70px 7px 10px;
-            border-top: #9b9b9b;
-            border-bottom: #9b9b9b;
-            border-bottom: 0;
-            letter-spacing: 0.1em;
-          } 
-
-          .car-container{
-            display: inline-block;
-            width: 520px;
-            height:580px;
-            border:1px solid #343a40;
-            background: white;
-            margin: 10px 50px 10px 70px;
-          }
-
-          .car-container:hover .line-card{
-            background-color:#007bff;
-          }
-
-          .card-body:hover{
-            color:#007bff;
-          }
-
-          .card-text:hover{
-            color:#007bff;
-          }
-
-          .card-subtitle:hover{
-            color:#007bff;
-          }
-
-          .card-title:hover{
-            color:#007bff;
-          }
-          
-
-          /*  */
-.p_model_car{
-  color:white;
+/* Свойства карточки машин */
+.cars-container {
+    text-align: center;
+    width: 100%;
 }
 
-h4{
+.card-img-top {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.card-text {
+    position: relative;
+    text-align: left;
+    display: block;
+    border: 1px solid #4b4c4d;
+    height: 35px;
+    color: #555252;
+    padding: 7px 70px 7px 10px;
+    border-top: #9b9b9b;
+    border-bottom: #9b9b9b;
+    border-bottom: 0;
+    letter-spacing: 0.1em;
+}
+
+.car-container {
+    display: inline-block;
+    width: 520px;
+    height: 580px;
+    border: 1px solid #343a40;
+    background: white;
+    margin: 10px 50px 10px 70px;
+}
+
+.car-container:hover .line-card {
+    background-color: #007bff;
+}
+
+.card-body:hover {
+    color: #007bff;
+}
+
+.card-text:hover {
+    color: #007bff;
+}
+
+.card-subtitle:hover {
+    color: #007bff;
+}
+
+.card-title:hover {
+    color: #007bff;
+}
+
+
+/*  */
+.p_model_car {
+    color: white;
+}
+
+h4 {
     text-align: center;
 }
 
-h4,h5{
+h4, h5 {
     text-transform: uppercase;
 }
 
-                                /* Свойства карточки модели машины */
-                                .line-card,.img-card{position: relative;}
+/* Свойства карточки модели машины */
+.line-card, .img-card {
+    position: relative;
+}
 
-                                .img-card{
-                                  width: 100%;
-                                  height:100%;
-                                  border-top: 0;
-                                }
+.img-card {
+    width: 100%;
+    height: 100%;
+    border-top: 0;
+}
 
-                                .text-card,.img-card{
-                                  border-bottom: 0;
-                                  border-radius: 2px;
-                                  border-style: solid;
-                                  border-color: #9b9b9b;
-                                }
+.text-card, .img-card {
+    border-bottom: 0;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: #9b9b9b;
+}
 
-                                .text-card{
-                                  padding: 15px;
-                                  text-align: center;
-                                  text-transform: uppercase;
-                                  font-family: 'Montserrat', serif; 
-                                  font-stretch: ultra-expanded;
-                                  border-bottom: 0;
-                                  letter-spacing: 0.4em;
-                                  font-weight: 800;
-                                  color:#9b9b9b;
+.text-card {
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', serif;
+    font-stretch: ultra-expanded;
+    border-bottom: 0;
+    letter-spacing: 0.4em;
+    font-weight: 800;
+    color: #9b9b9b;
 
-                                }
+}
 
-                                .auto-card{
-                                  width: 250px;
-                                  margin: 15px;  
-                                  display: inline-block;
-                                  text-align: center;  
-                                }
+.auto-card {
+    width: 250px;
+    margin: 15px;
+    display: inline-block;
+    text-align: center;
+}
 
-                                #auto-cards-container{
-                                  margin-left:55px;
-                                  margin-right:55px;
-                                  padding-left: 2%;
-                                  padding-right: 1%;
-                                  border-top: 1px solid #9b9b9b;
-                                  border-bottom: 1px solid #9b9b9b;
-                                  text-align: center;  
-                                  
-                                }
+#auto-cards-container {
+    margin-left: 55px;
+    margin-right: 55px;
+    padding-left: 2%;
+    padding-right: 1%;
+    border-top: 1px solid #9b9b9b;
+    border-bottom: 1px solid #9b9b9b;
+    text-align: center;
 
-                                .line-card{
-                                  width:100%;
-                                  height: 4px;
-                                }
+}
 
-                                .auto-card:hover .line-card{
-                                  background-color:#007bff;
-                                }
+.line-card {
+    width: 100%;
+    height: 4px;
+}
 
-                              
+.auto-card:hover .line-card {
+    background-color: #007bff;
+}
+
 
 /* Стилизация кнопок в header */
-  * {
+* {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-  }
+}
 
-  .flip-container{
+.flip-container {
     padding: 1%;
-  }
+}
 
-  .flip {
+.flip {
     position: relative;
     display: inline-block;
     width: 160px;
@@ -337,8 +534,9 @@ h4,h5{
     -moz-perspective: 500px;
     -ms-perspective: 500px;
     perspective: 500px;
-  }
-  .flip a {
+}
+
+.flip a {
     font-weight: 400;
     text-transform: uppercase;
     margin: 0;
@@ -362,9 +560,10 @@ h4,h5{
     -ms-transition: -ms-transform 0.3s;
     transition: transform 0.3s;
     cursor: pointer;
-  }
-  .flip a .front,
-  .flip a .back {
+}
+
+.flip a .front,
+.flip a .back {
     margin: 0;
     width: 160px;
     height: 48px;
@@ -372,8 +571,9 @@ h4,h5{
     position: absolute;
     text-align: center;
     letter-spacing: 0.1em;
-  }
-  .flip a .front {
+}
+
+.flip a .front {
     background-color: #343a40;
     color: #fff;
     -webkit-transform: rotateY(0) translateZ(24px);
@@ -381,18 +581,20 @@ h4,h5{
     -o-transform: rotateY(0) translateZ(24px);
     -ms-transform: rotateY(0) translateZ(24px);
     transform: rotateY(0) translateZ(24px);
-  }
-  .flip a .back {
-    background-color:#343a40;
-    color: rgba(34,34,34,0);
+}
+
+.flip a .back {
+    background-color: #343a40;
+    color: rgba(34, 34, 34, 0);
     -webkit-transform: rotateX(90deg) translateZ(24px);
     -moz-transform: rotateX(90deg) translateZ(24px);
     -o-transform: rotateX(90deg) translateZ(24px);
     -ms-transform: rotateX(90deg) translateZ(24px);
     transform: rotateX(90deg) translateZ(24px);
     overflow: hidden;
-  }
-  .flip a .back:after {
+}
+
+.flip a .back:after {
     content: '';
     position: absolute;
     top: -32%;
@@ -415,23 +617,26 @@ h4,h5{
     -o-transition-delay: 0.15s;
     -ms-transition-delay: 0.15s;
     transition-delay: 0.15s;
-  }
-  .flip a:hover {
+}
+
+.flip a:hover {
     -webkit-transform: translateZ(-24px) rotateX(-90deg);
     -moz-transform: translateZ(-24px) rotateX(-90deg);
     -o-transform: translateZ(-24px) rotateX(-90deg);
     -ms-transform: translateZ(-24px) rotateX(-90deg);
     transform: translateZ(-24px) rotateX(-90deg);
-  }
-  .flip a:hover .front {
+}
+
+.flip a:hover .front {
     background: #000;
     -webkit-transition: all 0.8s ease;
     -moz-transition: all 0.8s ease;
     -o-transition: all 0.8s ease;
     -ms-transition: all 0.8s ease;
     transition: all 0.8s ease;
-  }
-  .flip a:hover .back {
+}
+
+.flip a:hover .back {
     color: #222;
     -webkit-transition: color 0.4s linear;
     -moz-transition: color 0.4s linear;
@@ -439,44 +644,44 @@ h4,h5{
     -ms-transition: color 0.4s linear;
     transition: color 0.4s linear;
     background: #fff;
-  }
-  .flip a:hover .back:after {
+}
+
+.flip a:hover .back:after {
     -webkit-transform: rotate(6deg) translate(100px, -18px);
     -moz-transform: rotate(6deg) translate(100px, -18px);
     -o-transform: rotate(6deg) translate(100px, -18px);
     -ms-transform: rotate(6deg) translate(100px, -18px);
     transform: rotate(6deg) translate(100px, -18px);
-  }
-  
+}
 
-  /*scroll*/
-  body,
-    html {
-      height: 100%;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-    }
 
-    #matrix {
-      width: 400px;
-      margin: auto;
-      overflow: auto;
-      text-align: justify;
-    }
+/*scroll*/
+body,
+html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
 
-    #arrowTop {
-      height: 9px;
-      width: 14px;
-      color: royalblue;
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      cursor: pointer;
-    }
+#matrix {
+    width: 400px;
+    margin: auto;
+    overflow: auto;
+    text-align: justify;
+}
 
-    #arrowTop::before {
-      content: '▲';
-    }
+#arrowTop {
+    height: 9px;
+    width: 14px;
+    color: royalblue;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
 
-    
+#arrowTop::before {
+    content: '▲';
+}
+
