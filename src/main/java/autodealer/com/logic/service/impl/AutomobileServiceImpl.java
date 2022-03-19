@@ -48,7 +48,12 @@ public class AutomobileServiceImpl implements AutomobileService {
 
     @Override
     public List<AutomobileDTO> findByModelCar(Long id) {
-        return automobileDaoMySQl.findByModelAuto(id).stream().map(automobile -> Converter.convertEntityToDto(automobile)).collect(Collectors.toList());
+        return automobileDaoMySQl.findByModelAuto(id).stream().map(Converter::convertEntityToDto).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<AutomobileDTO> findByModelCarSection(Long section) {
+        return automobileDaoMySQl.findBySectionModelAuto(section).stream().map(Converter::convertEntityToDto).collect(Collectors.toList());
     }
 
     @Override

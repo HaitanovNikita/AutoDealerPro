@@ -9,4 +9,5 @@ import lombok.*;
 public class ModelCarDTO {
     private Long ID;
     private String name_model;
+    private String section;
 }

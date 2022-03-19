@@ -82,7 +82,7 @@ public class AutomobileController {
         return new ResponseEntity<>(automobileService.findById(id), HttpStatus.OK);
     }
 
-    @ApiOperation(value = "Find auto by model car id")
+    @ApiOperation(value = "Update auto by model car id")
     @PutMapping("/update")
     public ResponseEntity<AutomobileDTO> updateAuto(@RequestBody AutomobileDTO automobileDTO) {
         return new ResponseEntity<>(automobileService.updateAuto(automobileDTO), HttpStatus.OK);
@@ -92,5 +92,11 @@ public class AutomobileController {
     @GetMapping("/find/modelCar/{modelCar}")
     public ResponseEntity<List<AutomobileDTO>> findByModelCarId(@PathVariable("modelCar") Long id) {
         return new ResponseEntity<>(automobileService.findByModelCar(id), HttpStatus.OK);
+    }
+
+    @ApiOperation(value = "Find auto by model car id")
+    @GetMapping("/find/modelCarSection/{modelCarSection}")
+    public ResponseEntity<List<AutomobileDTO>> findByModelCarSection(@PathVariable("modelCarSection") Long section) {
+        return new ResponseEntity<>(automobileService.findByModelCar(section), HttpStatus.OK);
     }
 }

@@ -17,6 +17,8 @@ public interface AutomobileDao {
 
     List<Automobile> findByModelAuto(Long id);
 
+    List<Automobile> findBySectionModelAuto(Long section);
+
     Automobile save(Automobile automobile);
 
     Automobile getMostPopularAuto();

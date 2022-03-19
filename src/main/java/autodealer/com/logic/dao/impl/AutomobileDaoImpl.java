@@ -17,6 +17,7 @@ public class AutomobileDaoImpl implements AutomobileDao {
     private final AutomobileRepository automobileRepository;
     @PersistenceContext
     private EntityManager entityManager;
+    private Long modelAutoSection;
 
     @Autowired
     public AutomobileDaoImpl(AutomobileRepository automobileRepository) {
@@ -95,6 +96,23 @@ public class AutomobileDaoImpl implements AutomobileDao {
                 " inner join TypeCarBody as tcb on aut.type_car_body= tcb.id " +
                 " where " +
                 " aut.model_car = " + id;
+        List<Long> resultList = entityManager.createQuery(query, Long.class).getResultList();
+        List<Automobile> automobileList = new ArrayList<>();
+        resultList.stream().forEach(idAuto -> automobileList.add(findById(idAuto)));
+        return automobileList;
+    }
+
+    @Override
+    public List<Automobile> findBySectionModelAuto(Long section) {
+        String query = "Select " + "aut.id " +
+                " from Automobile " + "as aut  " +
+                " inner join ModelCar as mc on aut.model_car = mc.id " +
+                " inner join PowerCar as pc on  aut.power_car = pc.id " +
+                " inner join EngineCar as ec on  aut.engine_car = ec.id " +
+                " inner join ColorCar as cc on aut.color_car = cc.id " +
+                " inner join TypeCarBody as tcb on aut.type_car_body= tcb.id " +
+                " where " +
+                " mc.section = " + section;
         List<Long> resultList = entityManager.createQuery(query, Long.class).getResultList();
         List<Automobile> automobileList = new ArrayList<>();
         resultList.stream().forEach(idAuto -> automobileList.add(findById(idAuto)));

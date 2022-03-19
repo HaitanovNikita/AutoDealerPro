@@ -22,11 +22,11 @@ public class Converter {
     }
 
     public static ModelCar convertDtoToEntity(ModelCarDTO modelCarDTO) {
-        return ModelCar.builder().ID(modelCarDTO.getID()).name_model(modelCarDTO.getName_model()).build();
+        return ModelCar.builder().ID(modelCarDTO.getID()).name_model(modelCarDTO.getName_model()).section(modelCarDTO.getSection()).build();
     }
 
     public static ModelCarDTO convertEntityToDto(ModelCar modelCar) {
-        return ModelCarDTO.builder().ID(modelCar.getID()).name_model(modelCar.getName_model()).build();
+        return ModelCarDTO.builder().ID(modelCar.getID()).name_model(modelCar.getName_model()).section(modelCar.getSection()).build();
     }
 
     public static PowerCar convertDtoToEntity(PowerCarDTO powerCarDTO) {

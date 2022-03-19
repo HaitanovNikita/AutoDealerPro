@@ -24,6 +24,8 @@ public class ModelCar implements Serializable {
     private Long ID;
     @Column(name = "name_model")
     private String name_model;
+    @Column(name = "section")
+    private String section;
 
     @OneToMany(mappedBy = "model_car",
             cascade = CascadeType.ALL,
