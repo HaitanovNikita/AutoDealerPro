@@ -1,3 +1,4 @@
+#http://localhost:1050/autodealer-apigateway/auto-dealer/
 server:
   servlet:
     context-path: /${spring.application.name}

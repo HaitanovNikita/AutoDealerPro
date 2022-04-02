@@ -29,6 +29,6 @@ for (var i = 0; i < elements.length; i++) {
         console.log("idModel=" + id_model_car);
         document.cookie = "idModel=" + id_model_car + "; path=/; expires='+" + new Date(Date.now() + 86400e3).toUTCString;
         console.log(document.cookie);
-        window.location.href = '/specificModelCar.html';
+        window.location.href = '/autodealer-apigateway/auto-dealer/specificModelCar.html';
     };
 }

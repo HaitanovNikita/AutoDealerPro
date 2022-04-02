@@ -15,7 +15,7 @@ class Auto{
 
     auto(){
         return `<div class="car-container">
-        <img class="card-img-top text-monospace" alt="Audi `+this.model_car+`" src="images/auto-cards/`+this.ID+`.jpg">
+        <img class="card-img-top text-monospace" alt="Audi `+this.model_car+`" src="/autodealer-apigateway/auto-dealer/images/auto-cards/`+this.ID+`.jpg">
         <div class="card-body">
             <h5 class="card-title text-monospace">`+this.car_make+'  '+this.model_car+ ` <span class="badge badge-dark">Дата випуску:`+this.year_issue_car+`</span> </h5>
             <h6 class="card-subtitle mb-2 text-muted text-monospace">`+this.type_car_body+`</h6>

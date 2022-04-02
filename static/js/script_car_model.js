@@ -14,7 +14,7 @@ class AutoModelCard {
             ` + this.model_car + ` ` + `
         <p class="p_model_car">` + this.id + `</p>
             </div>
-        <img class="img-card" src="images/` + this.id + `.jpg"  alt="Audi ` + this.model_car + `">
+        <img class="img-card" src="autodealer-apigateway/auto-dealer/images/` + this.id + `.jpg"  alt="Audi ` + this.model_car + `">
         <div class="line-card"></div >
     </div>
         `;

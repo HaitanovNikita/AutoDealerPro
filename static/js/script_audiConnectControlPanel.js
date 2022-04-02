@@ -15,16 +15,16 @@ function queryToServer(operation) {
             if (xhr.status == 200) { // Успішний вхід в систему!
                 console.log("Result operation: " + operation + " : " + xhr.responseText);
                 let arrResponseText = xhr.responseText.split(" ");
-                if (operation.includes('/manager/read')) {
+                if (operation.includes('/autodealer-apigateway/auto-dealer/manager/read')) {
                     console.log("if|getAllManager");
                     addTable(arrResponseText, 'manager');
-                } else if (operation.includes('/client/read')) {
+                } else if (operation.includes('/autodealer-apigateway/auto-dealer/client/read')) {
                     console.log("if|getAllClient");
                     addTable(arrResponseText, 'client');
-                } else if (operation.includes('/auto/profit')) {
+                } else if (operation.includes('/autodealer-apigateway/auto-dealer/auto/profit')) {
                     let res = xhr.responseText;
                     return res.substring(1);
-                } else if (operation.includes('/auto/mostPopularAuto')) {
+                } else if (operation.includes('/autodealer-apigateway/auto-dealer/auto/mostPopularAuto')) {
                     return JSON.parse(xhr.responseText);
                 }
             } else if (xhr.status == 401) {
@@ -213,7 +213,7 @@ function getMostPopularAuto() {
                 containerMostPopularCar.innerHTML = `
             <h4 class="font-weight-light"> Найбільш популярна марка авто по продажам в 2019 році</h4> 
             <br>
-            <img id="mostPopularCar" src="images/` + auto.id + `.jpg">
+            <img id="mostPopularCar" src="/autodealer-apigateway/auto-dealer/images/` + auto.id + `.jpg">
             <h5 id="mostPopularMakeCar"class="font-weight-bold">` + auto.car_make + ` ` + auto.model_car + `</h5>
             <p id="mostPopularBodyCar"class="font-weight-light">Кузов: ` + auto.type_car_body + `</p>
             <p id="mostPopularEngineCar"class="font-weight-light">Тип двигуна: ` + auto.engine_car + `</p>
@@ -242,7 +242,7 @@ let dateLogin = Cookies.get('date');
 console.log("Data manager: " + name + "  " + post + "  " + email);
 if (name === undefined) {
     alert("Час сессії вийшов, необхідно повторно зайти в систему!")
-    window.location.href = "/audiConnect.html";
+    window.location.href = "/autodealer-apigateway/auto-dealer/audiConnect.html";
 }
 document.getElementById('name_manager').append(name);
 document.getElementById('post_manager').append('Посада: ' + post);

@@ -22,7 +22,7 @@ class RegistryInSystem {
             const pass = document.getElementById("pass_enter").value;
             var xhr = new XMLHttpRequest();
 
-            let query = '/manager/find/login/' + log + '/password/' + pass;
+            let query = '/autodealer-apigateway/auto-dealer/manager/find/login/' + log + '/password/' + pass;
             xhr.open('POST', query, true);
             // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); // Отправляем кодировку
             xhr.send(query);
@@ -43,7 +43,7 @@ class RegistryInSystem {
                         document.cookie = "time=" + date.getHours() + ':' + date.getMinutes() + ";  path=/; max-age=3600";
                         document.cookie = "date=" + date.toDateString() + ";  path=/; max-age=3600";
 
-                        window.location.href = "/controlPanel.html";
+                        window.location.href = "/autodealer-apigateway/auto-dealer/controlPanel.html";
                     } else if (xhr.status == 401) {//Вхід в систему не успішний!
                         alert(xhr.responseText)
                     } else {
@@ -67,7 +67,7 @@ class RegistryInSystem {
 
             var xhr = new XMLHttpRequest();
 
-            let query = '/login/?login=' + registLogin + '&password=' + registPassword + '&id=' + id + '&fname=' + fnameRegist + '&lname=' + lnameRegist + '&email=' + emailRegist;
+            let query = '/autodealer-apigateway/auto-dealer/login/?login=' + registLogin + '&password=' + registPassword + '&id=' + id + '&fname=' + fnameRegist + '&lname=' + lnameRegist + '&email=' + emailRegist;
             xhr.open('POST', query, true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); // Отправляем кодировку
             xhr.send(query);
